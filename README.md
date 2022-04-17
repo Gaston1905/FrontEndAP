@@ -1,4 +1,4 @@
-<img width="320" src="https://github.com/Gaston1905/portfolio/tree/master/images/2.jpg" align="right" />
+<img width="220" src="https://github.com/Gaston1905/portfolio/tree/master/images/2.jpg" align="right" />
 
 # Portfolio Gaston Gaitan
 
