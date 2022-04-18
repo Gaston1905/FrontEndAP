@@ -1,10 +1,9 @@
 /* Header */
 .header {
   background-color: #399ed2;
-
   display: grid;
   grid-template-columns: [prueba] 25px [first] 100px [line2] auto [prueba4] 50px [prueba3] 5px [line3] 80px [col4-start] 50px [five] 100px [prueba2] 20px [six] 30px [end];
-  grid-template-rows: [row1-start] 65px [row1-end] 30px [third-line] 360px [prueba-line] 10px [last-line] 30px [prueba4-line] 50px [prueba2-line] 10px [prueba3-line];
+  grid-template-rows: [row1-start] 65px [row1-end] 30px [third-line] 20% [prueba-line] 20% [last-line] 20% [prueba4-line] 20% [prueba2-line] 20% [prueba3-line];
 }
 
 #logoArgProg {
@@ -53,7 +52,7 @@
 
 #login {
   background-color: rgb(225, 222, 222);
-  border: solid 2px #399ed2;
+  border: solid 2px white;
   border-radius: 15%;
   align-self: center;
   grid-column-start: five;
@@ -73,48 +72,86 @@
 }
 
 #fotoID {
-  display: inline-block;
   width: 220px;
-  grid-column-start: line2;
-  grid-column-end: prueba4;
-  grid-row-start: prueba-line;
-  grid-row-end: last-line;
-}
-
-#name {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: bold;
+  border: solid 5px #399ed2;
   grid-column-start: line2;
   grid-column-end: prueba4;
   grid-row-start: last-line;
-  grid-row-end: prueba2-line;
+  grid-row-end: prueba4-line;
 }
 
-#title {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  grid-column-start: line2;
-  grid-column-end: prueba4;
-  grid-row-start: prueba2-line;
-  grid-row-end: prueba3-line;
+/* About */
+
+.about {
+  display: inline-grid;
+  grid-template-columns: [first] 5% [line2] 20% [line3] 20% [col4-start] 30% [five] 5% [end];
+  grid-template-rows: [row1-start] 50px [row1-end] auto [third-line] 50px [last-line];
 }
 
-#sintesis {
+.about #name {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
   grid-column-start: line2;
-  grid-column-end: six;
-  grid-row-start: prueba2-line;
-  grid-row-end: prueba3-line;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: last-line;
+}
+
+.about #sintesis {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  grid-column-start: five;
+  grid-column-end: end;
+  grid-row-start: row1-start;
+  grid-row-end: last-line;
+  text-align: justify;
+  width: 450px;
+  height: 350px;
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 40px;
+}
+
+.experience {
+  width: 100%;
+  margin-top: -55px;
+  padding-top: 70px;
+}
+
+.education {
+  width: 100%;
+  margin-top: -55px;
+  padding-top: 70px;
+}
+
+.skills {
+}
+
+.projects {
 }
 
 .rectangle {
+  height: 50px;
+  margin-top: -28px;
+}
+
+.rectangle2 {
   height: 100px;
-  margin-top: -50px;
+  margin-top: -25px;
 }
 
 .bg-white {
   background-color: white;
 }
 
+.bg-gray {
+  background-color: rgb(225, 222, 222);
+}
+
 .skew-left {
-  transform: skewY(-4deg);
+  transform: skewY(-1.8deg);
+}
+
+.skew-right {
+  transform: skewY(4deg);
 }
