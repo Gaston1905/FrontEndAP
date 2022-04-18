@@ -1,10 +1,10 @@
 /* Header */
 .header {
+  background-color: #399ed2;
+
   display: grid;
   grid-template-columns: [prueba] 25px [first] 100px [line2] auto [prueba4] 50px [prueba3] 5px [line3] 80px [col4-start] 50px [five] 100px [prueba2] 20px [six] 30px [end];
   grid-template-rows: [row1-start] 65px [row1-end] 30px [third-line] 360px [prueba-line] 10px [last-line] 30px [prueba4-line] 50px [prueba2-line] 10px [prueba3-line];
-  background-image: url("https://github.com/Gaston1905/portfolio/blob/master/images/markers/Rectangle%201.png?raw=true");
-  background-repeat: no-repeat;
 }
 
 #logoArgProg {
@@ -65,7 +65,7 @@
 #banner {
   width: 100%;
   height: 480px;
-  border: solid 2px #399ed2;
+  border: solid 2px white;
   grid-column-start: first;
   grid-column-end: six;
   grid-row-start: row1-end;
@@ -73,6 +73,7 @@
 }
 
 #fotoID {
+  display: inline-block;
   width: 220px;
   grid-column-start: line2;
   grid-column-end: prueba4;
@@ -103,4 +104,17 @@
   grid-column-end: six;
   grid-row-start: prueba2-line;
   grid-row-end: prueba3-line;
+}
+
+.rectangle {
+  height: 100px;
+  margin-top: -50px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.skew-left {
+  transform: skewY(-4deg);
 }
