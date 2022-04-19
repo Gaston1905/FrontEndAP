@@ -71,41 +71,45 @@
   grid-row-end: tirdh-line;
 }
 
-#fotoID {
-  width: 220px;
-  border: solid 5px #399ed2;
-  grid-column-start: line2;
-  grid-column-end: prueba4;
-  grid-row-start: last-line;
-  grid-row-end: prueba4-line;
-}
-
 /* About */
 
 .about {
   display: inline-grid;
-  grid-template-columns: [first] 5% [line2] 20% [line3] 20% [col4-start] 30% [five] 5% [end];
-  grid-template-rows: [row1-start] 50px [row1-end] auto [third-line] 50px [last-line];
+  grid-template-columns: [principal] 50px [first] 150px [line2] 30% [line3] 40% [col4-start] 150px [five] 250px [end];
+  grid-template-rows: [row1-start] 15px [row1-end] 30% [third-line] 1px [last-line];
 }
 
-.about #name {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 48px;
-  font-weight: bold;
+#fotoID {
+  width: 220px;
+  border: solid 5px #399ed2;
   grid-column-start: line2;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: last-line;
+  grid-column-end: col4-start;
+  grid-row-start: row1-end;
+  grid-row-end: third-line;
+}
+
+#name {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  transform: skewY(4deg);
+  justify-self: baseline;
+  justify-self: center;
+  grid-column-start: principal;
+  grid-column-end: col4-start;
+  grid-row-start: end;
+  grid-row-end: finish;
 }
 
 .about #sintesis {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  grid-column-start: five;
-  grid-column-end: end;
+  grid-column-start: line3;
+  grid-column-end: five;
   grid-row-start: row1-start;
-  grid-row-end: last-line;
-  text-align: justify;
-  width: 450px;
+  grid-row-end: third-line;
+  text-align: initial;
+  justify-content: center;
+  width: 500px;
   height: 350px;
   font-size: 16px;
   font-weight: lighter;
@@ -130,14 +134,22 @@
 .projects {
 }
 
+/* footer */
+
+.footer {
+  margin-top: 0px;
+  padding-top: 300px;
+}
+
 .rectangle {
-  height: 50px;
-  margin-top: -28px;
+  width: 100%;
+  height: 60px;
+  margin-top: -37px;
 }
 
 .rectangle2 {
   height: 100px;
-  margin-top: -25px;
+  margin-top: -95px;
 }
 
 .bg-white {
@@ -148,8 +160,12 @@
   background-color: rgb(225, 222, 222);
 }
 
+.bg-lightblue {
+  background-color: #399ed2;
+}
+
 .skew-left {
-  transform: skewY(-1.8deg);
+  transform: skewY(-2.1deg);
 }
 
 .skew-right {
