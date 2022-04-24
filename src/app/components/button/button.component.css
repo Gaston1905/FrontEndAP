@@ -3,8 +3,10 @@
 }
 
 .btn:hover {
-  opacity: 0.6;
+  opacity: 0.9;
   text-decoration: none;
-  color: #399ed2;
-  border: solid 2px #399ed2;
+  background-color: blue;
+  color: blue;
+  border: solid 2px blue;
+  transform: scale(1.5);
 }
