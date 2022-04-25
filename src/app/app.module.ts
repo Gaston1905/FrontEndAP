@@ -7,6 +7,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SpinnerComponent } from '../app/components/spinner/spinner.component';
+import { BodyComponent } from './components/body/body.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SpinnerComponent } from '../app/components/spinner/spinner.component';
     HeaderComponent,
     ButtonComponent,
     SpinnerComponent,
+    BodyComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, MatProgressSpinnerModule],
   providers: [],
