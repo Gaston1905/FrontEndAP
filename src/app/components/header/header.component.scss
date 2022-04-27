@@ -1,74 +1,9 @@
-header {
-  background-color: #399ed2;
-  width: 100%;
-  height: 580px;
-}
-
-.principal {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.logoArgProg {
-  border: solid 2px white;
-  border-radius: 25%;
-  position: absolute;
-  width: 120px;
-  flex: 1 1 0;
-  z-index: 4;
-  align-items: center;
-  top: 5px;
-  left: 50px;
-  background-color: #399ed2;
-  filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.7;
-}
-
-.container-contact-login {
-  position: absolute;
-  right: 50px;
-  top: 0;
-  padding-right: 16px;
-  z-index: 3;
-  padding-left: 4px;
-}
-
-.contact-login {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  z-index: 0;
-  align-items: center;
-}
-.btn-social {
-  display: flex;
-  flex-grow: 1;
-  align-items: flex-end;
-  padding-left: 110px;
-  justify-content: center;
-  padding-right: 110px;
+li {
   list-style-type: none;
-  margin: 0;
-  padding: 15px 20px;
-  justify-content: space-evenly;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 50px;
-  margin-inline-end: 50px;
-  padding-inline-start: 40px;
 }
 
 .logoIn {
   width: 30px;
-  margin: 0 4px;
-  border: solid 0.1px white;
-  border-radius: 25%;
-  background-color: #399ed2;
-  filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.7;
 }
 
 .logoIn:hover {
@@ -80,13 +15,6 @@ header {
 
 .logoIg {
   width: 30px;
-  margin: 0 4px;
-  border: solid 0.1px white;
-  border-radius: 25%;
-  background-color: #399ed2;
-  filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.7;
 }
 .logoIg:hover {
   transform: scale(1.3);
@@ -97,13 +25,6 @@ header {
 
 .logoGithub {
   width: 30px;
-  margin: 0 4px;
-  border: solid 0.1px white;
-  border-radius: 25%;
-  background-color: #399ed2;
-  filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.7;
 }
 
 .logoGithub:hover {
@@ -115,13 +36,6 @@ header {
 
 .logoFb {
   width: 30px;
-  margin: 0 4px;
-  border: solid 0.1px white;
-  border-radius: 25%;
-  background-color: #399ed2;
-  filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.7;
 }
 
 .logoFb:hover {
@@ -130,28 +44,3 @@ header {
   -moz-opacity: 1;
   opacity: 1;
 }
-
-.btn {
-  flex: 0 1 auto;
-}
-
-.secondary {
-  display: flex;
-  flex-direction: row;
-}
-
-.banner {
-  box-sizing: border-box;
-  position: absolute;
-  border: solid 2px white;
-  border-radius: 20%;
-  right: 0;
-  top: 100px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  height: 480px;
-}
-
-
-

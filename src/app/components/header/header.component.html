@@ -1,30 +1,41 @@
 <header>
-  <div class="principal">
-    <img src="https://github.com/Gaston1905/portfolio/blob/master/images/logoArgprog.png?raw=true" class="logoArgProg">
-    <div class="container-contact-login">
-      <div class="contact-login">
-        <app-button class="btn" color="rgb(225, 222, 222)" text="Login" (btnClick)="toggleLogin()"></app-button>
-        <ul class="btn-social">
-          <li><a href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
-                src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIN.png?raw=true" class="logoIn"></a>
-          </li>
-          <li><a href="https://www.instagram.com/pitu_gaitan/"><img
-                src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIG.png?raw=true" class="logoIg"></a>
-          </li>
-          <li><a href="https://github.com/Gaston1905"><img
-                src="https://github.com/Gaston1905/portfolio/blob/master/images/imgGIT.png?raw=true"
-                class="logoGithub"></a>
-          </li>
-          <li><a href="https://www.facebook.com/pitu.pitu.7982/"><img
-                src="https://github.com/Gaston1905/portfolio/blob/master/images/imgFB.png?raw=true" class="logoFb"></a>
-          </li>
-        </ul>
-      </div>
+  <nav class="navbar navbar-light bg-dark border-bottom border-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://github.com/Gaston1905/portfolio/blob/master/images/APLogo-20-20.png?raw=true" alt=""
+          width="30" height="24" class="d-inline-block align-text-top">
+        <span class=text-light>Argentina Programa</span>
+      </a>
+      <ul class="navbar-nav ml-auto d-flex flex-row-reverse bd-highlight">
+        <app-button class="btn btn-primary btn-sm ms-1 me-1" text="Login" (btnClick)="toggleLogin()">
+        </app-button>
+        <li class=" nav-item active ms-1 me-1">
+          <a class="nav-link" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
+              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIN.png?raw=true" class="logoIn"></a>
+        </li>
+        <li class="nav-item active ms-1 me-1">
+          <a class="nav-link active" href="https://www.instagram.com/pitu_gaitan/"><img
+              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIG.png?raw=true" class="logoIg"></a>
+        </li>
+        <li class="nav-item active ms-1 me-1">
+          <a class="nav-link active" href="https://github.com/Gaston1905"><img
+              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgGIT.png?raw=true"
+              class="logoGithub"></a>
+        </li>
+        <li class="nav-item active ms-1 me-1">
+          <a class="nav-link active" href="https://www.facebook.com/pitu.pitu.7982/"><img
+              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgFB.png?raw=true" class="logoFb"></a>
+        </li>
+
+      </ul>
     </div>
+
+  </nav>
+  <div class="container">
+    <img src="https://github.com/Gaston1905/portfolio/blob/master/images/Banner.jpg?raw=true"
+      class="img-fluid mx-auto d-block" alt="Banner">
   </div>
 
-  <div class="secondary">
-    <img src="https://github.com/Gaston1905/portfolio/blob/master/images/2.jpg?raw=true" class="banner">
-  </div>
+
 
 </header>
