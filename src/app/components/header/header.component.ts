@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserlogedService } from 'src/app/services/userloged.service';
-import { LogincallService } from 'src/app/services/logincall.service';
+
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private userloged: UserlogedService,
-    private logincall: LogincallService
+
   ) {
     this.subscription = this.userloged
       .onToggle()
@@ -28,7 +28,5 @@ export class HeaderComponent implements OnInit {
   toggleLogin() {
     this.userloged.toggleLogin();
   }
-  wPopup() {
-    this.logincall.wPopup();
-  }
+
 }

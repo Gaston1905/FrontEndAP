@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserlogedService } from 'src/app/services/userloged.service';
 import { LogincallService } from 'src/app/services/logincall.service';
 import { Subscription } from 'rxjs';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-button',
@@ -20,12 +22,9 @@ export class ButtonComponent implements OnInit {
 
   constructor(
     private userloged: UserlogedService,
-    private logincall: LogincallService
-  ) {
-    this.subscription = this.logincall
-      .onWindow()
-      .subscribe((value) => (this.wpopup = value));
-  }
+    private logincall: LogincallService,
+    private modalService: NgbModal
+  ) {}
 
   ngOnInit(): void {}
 
@@ -33,6 +32,9 @@ export class ButtonComponent implements OnInit {
     this.btnClick.emit();
   }
   wPopup() {
-    this.logincall.wPopup();
+    const modal = this.modalService.open(LoginComponent);
+    modal.result.catch(this.handleModalLoginClose.bind(this));
   }
+
+  handleModalLoginClose() {}
 }

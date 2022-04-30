@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,10 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [LoginComponent],
 })
 export class AppModule {}

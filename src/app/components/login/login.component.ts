@@ -2,7 +2,6 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { LogincallService } from 'src/app/services/logincall.service';
 import { Subscription } from 'rxjs';
-import { UserlogedService } from 'src/app/services/userloged.service';
 
 @Component({
   selector: 'app-login',
@@ -17,12 +16,12 @@ export class LoginComponent {
   @Input() display: string = '';
 
   wpopup: boolean = false;
+
   subscription?: Subscription;
 
   constructor(
     private authService: AuthService,
-    private logincall: LogincallService,
-    private userloged: UserlogedService
+    private logincall: LogincallService
   ) {
     this.subscription = this.logincall
       .onWindow()
