@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-light bg-dark border-bottom border-white">
+  <nav class="navbar navbar-light bg-dark-disabled-color border-bottom border-white">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://github.com/Gaston1905/portfolio/blob/master/images/APLogo-20-20.png?raw=true" alt=""
@@ -7,8 +7,9 @@
         <span class=text-light>Argentina Programa</span>
       </a>
       <ul class="navbar-nav ml-auto d-flex flex-row-reverse bd-highlight">
-        <app-button class="btn btn-primary btn-sm ms-1 me-1" text="Login" (btnClick)="toggleLogin()">
-        </app-button>
+        <app-button class="btn btn-sm" color="{{showlogin ? 'red' : 'lightblue'}}"
+          text="{{showlogin ? 'Logout' : 'Login'}}" (click)="toggleLogin()" (click)="wPopup()"></app-button>
+        <app-login display="{{wpopup ? 'block' : 'none'}}"></app-login>
         <li class=" nav-item active ms-1 me-1">
           <a class="nav-link" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
               src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIN.png?raw=true" class="logoIn"></a>
@@ -31,10 +32,6 @@
     </div>
 
   </nav>
-  <div class="container">
-    <img src="https://github.com/Gaston1905/portfolio/blob/master/images/Banner.jpg?raw=true"
-      class="img-fluid mx-auto d-block" alt="Banner">
-  </div>
 
 
 

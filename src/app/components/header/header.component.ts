@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserlogedService } from 'src/app/services/userloged.service';
+import { LogincallService } from 'src/app/services/logincall.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title: string = 'portfolio';
+  showlogin: boolean = false;
+  wpopup: boolean = false;
+  subscription?: Subscription;
 
-  constructor() {}
+  constructor(
+    private userloged: UserlogedService,
+    private logincall: LogincallService
+  ) {
+    this.subscription = this.userloged
+      .onToggle()
+      .subscribe((value) => (this.showlogin = value));
+  }
 
   ngOnInit(): void {}
 
-  toggleLogin() {}
+  toggleLogin() {
+    this.userloged.toggleLogin();
+  }
+  wPopup() {
+    this.logincall.wPopup();
+  }
 }

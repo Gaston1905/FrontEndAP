@@ -9,4 +9,8 @@ export class BodyComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleLogin() {
+    console.log('click');
+  }
 }

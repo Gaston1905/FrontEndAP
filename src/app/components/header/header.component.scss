@@ -44,3 +44,16 @@ li {
   -moz-opacity: 1;
   opacity: 1;
 }
+
+.navbar {
+  backdrop-filter: blur(10px);
+}
+
+.menu-fixed {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+}
