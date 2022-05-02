@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserlogedService } from 'src/app/services/userloged.service';
-import { LogincallService } from 'src/app/services/logincall.service';
 import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from '../login/login.component';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-button',
@@ -22,8 +22,8 @@ export class ButtonComponent implements OnInit {
 
   constructor(
     private userloged: UserlogedService,
-    private logincall: LogincallService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private authservice: AuthService
   ) {}
 
   ngOnInit(): void {}

@@ -7,8 +7,21 @@
         <span class=text-light>Argentina Programa</span>
       </a>
       <ul class="navbar-nav ml-auto d-flex flex-row-reverse bd-highlight">
+
+        <!--             Estado Logeado            -->
+
+        <nav class="navbar navbar-light bg-light" *ngIf="userLogged|async as user">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img *ngIf="user.photoURL" src="{{user.photoURL}}" alt="" width="30" height="24">{{user.email}}
+            </a>
+          </div>
+        </nav>
+
+        <!-------------------------------------------->
         <app-button class="btn btn-sm" color="{{showlogin ? 'red' : 'lightblue'}}"
-          text="{{showlogin ? 'Logout' : 'Login'}}" (click)="toggleLogin()"></app-button>
+          text="{{showlogin  ? 'Logout' : 'Login'}}" (click)="toggleLogin()">
+        </app-button>
         <li class=" nav-item active ms-1 me-1">
           <a class="nav-link" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
               src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIN.png?raw=true" class="logoIn"></a>
@@ -26,12 +39,8 @@
           <a class="nav-link active" href="https://www.facebook.com/pitu.pitu.7982/"><img
               src="https://github.com/Gaston1905/portfolio/blob/master/images/imgFB.png?raw=true" class="logoFb"></a>
         </li>
-
       </ul>
     </div>
 
   </nav>
-
-
-
 </header>

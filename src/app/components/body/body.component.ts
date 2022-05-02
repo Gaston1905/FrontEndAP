@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-body',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body.component.scss'],
 })
 export class BodyComponent implements OnInit {
+  faPenToSquare = faPenToSquare;
   constructor() {}
 
   ngOnInit(): void {}

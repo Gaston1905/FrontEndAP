@@ -5,20 +5,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SpinnerComponent } from '../app/components/spinner/spinner.component';
+
 import { BodyComponent } from './components/body/body.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ButtonComponent,
-    SpinnerComponent,
     BodyComponent,
     LoginComponent,
   ],
@@ -27,6 +30,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     NgbModule,
+    FormsModule,
+    FontAwesomeModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

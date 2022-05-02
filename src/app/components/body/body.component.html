@@ -1,83 +1,147 @@
-<div class="container bg-dark-disabled-color border-top border_white d-inline-flex p-2 bd-highlight">
-  <div class="row d-flex justify-content-spacely">
-
-    <div class="col-4 ps-5 ">
-      <div clas="d-grid gap-3">
-        <div class="flex-grow-2">
-          <img src="https://github.com/Gaston1905/portfolio/blob/master/images/Foto.png?raw=true" class="img-thumbnail "
-            alt="Foto de Perfil">
-        </div>
-      </div>
-    </div>
-    <div class="col-8">
-      <div clas="d-grid gap-3 ps-1">
-        <div class="flex-shrink-1">
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"></label>
-            <textarea class="form-control" id="exampleFormControlTextarea1"
-              rows="3">Breve decripción acerca de tí...</textarea>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-9 p-4">
-      <div clas="d-grid gap-3">
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"></label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"></label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <img src="https://github.com/Gaston1905/portfolio/blob/master/images/Banner.png?raw=true"
+    class="img-fluid mx-auto d-block" alt="Banner">
+</div>
 
 
+<div class="d-flex p-2 bd-highlight flex-md-row d-flex justify-content-around">
+  <img mat-card-image src="https://github.com/Gaston1905/portfolio/blob/master/images/Foto.png?raw=true" class="">
+  <div class="btn-edit  align-self-center"><a href="#" class="btn-right">
+      <fa-icon [icon]="faPenToSquare"></fa-icon>
+    </a></div>
+</div>
 
 
+<div class="d-flex flex-column bd-highlight mb-3 ">
+  <div class="card card-mat">
 
+    <mat-card-title class="p-2 bd-highlight">
+      <h2 class="text-white text-center fs-1">GASTON GAITAN</h2>
+      <div class="btn-edit text-end "><a href="#" class="btn-right">
+          <fa-icon [icon]="faPenToSquare"></fa-icon>
+        </a></div>
+    </mat-card-title>
+
+    <mat-card-subtitle class="p-2 bd-highlight">
+      <h2 class="text-white text-center fs-1">Desarrolador Full Stack Jr.</h2>
+      <div class="btn-edit text-end"><a href="#" class="btn-right">
+          <fa-icon [icon]="faPenToSquare"></fa-icon>
+        </a></div>
+    </mat-card-subtitle>
   </div>
 </div>
 
-<div class="container bg-light border-top border_white border-bottom border_dark pt-5">
-  <div class="row pt-5 mt-5">
-    <div class="col-sm-6 col-md-5 col-lg-6 align-self-center">
-      <p class=" text-start text-lg-start text-end fs-1 ms-5">EXPERIENCIA</p>
-    </div>
-    <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0 pb-5 justify-content-between">
-      <p class=" text-start text-lg-start text-end fs-4  ">Febrero 2022 - Actualidad</p>
-      <p class=" text-start text-lg-start text-end fs-2  mt-1">Acompañamientos Personalizados • Ambulatorio •
+
+<div class="container border-top border_white ps-5 d-flex flex-column bd-highlight mb-3 justify-content-around">
+
+  <mat-card-title class="p-2 bd-highlight d-flex flex-column bd-highlight mb-3 ms-5 ps-5">
+    <h2 class="text-white fs-1">Acerca de...</h2>
+
+    <div class="btn-edit "><a href="#" class="btn-right">
+        <fa-icon [icon]="faPenToSquare"></fa-icon>
+      </a></div>
+  </mat-card-title>
+
+  <mat-card-content class="p-2 bd-highlight d-flex flex-column bd-highlight mb-3 align-items-end me-5 pe-5">
+    <h2 class="text-white">Tesista en licenciatura en psicología | UADER</h2>
+    <h2 class="text-white">A.D.A. en licenciatura en psicología | UADER</h2>
+    <h2 class="text-white">Estudiante licenciatura en ciencias políticas | UNER</h2>
+
+    <div class="btn-edit "><a href="#" class="btn-right">
+        <fa-icon [icon]="faPenToSquare"></fa-icon>
+      </a></div>
+  </mat-card-content>
+
+</div>
+
+
+<div
+  class="container border-top border_white ps-5 d-flex flex-row bd-highlight mb-3 d-flex d-flex align-content-between justify-content-between">
+  <mat-card-title class="p-2 bd-highlight d-flex flex-row bd-highlight mb-3 align-items-center ms-5">
+    <h2 class="text-white text-end ms-5 fs-1">EXPERIENCIA</h2>
+  </mat-card-title>
+
+  <div class="p-2 bd-highlight ">
+    <mat-card-content class="d-flex flex-column bd-highlight mb-3">
+      <h2 class=" text-white">Febrero 2022 - Actualidad</h2>
+      <h2 class="text-white">Acompañamientos Personalizados • Ambulatorio •
         Cambio
-        de Hábitos</p>
-      <p class=" text-start text-lg-start text-end fs-4  mt-2">Marzo 2020 - Actualidad</p>
-      <p class=" text-start text-lg-start text-end fs-2  mt-1">Diseñador gráfico • Entornos digitales •
-        Freelance</p>
-      <p class=" text-start text-lg-start text-end fs-4  mt-2">Septiembre 2015 – marzo 2020</p>
-      <p class=" text-start text-lg-start text-end fs-2  mt-1">Empleado • Encargado de limpieza • Farmacia
-        Paraná</p>
-    </div>
+        de Hábitos</h2>
+      <h2 class="text-white">Marzo 2020 - Actualidad</h2>
+      <h2 class="text-white">Diseñador gráfico • Entornos digitales •
+        Freelance</h2>
+      <h2 class="text-white">Septiembre 2015 – marzo 2020</h2>
+      <h2 class="text-white">Empleado • Encargado de limpieza • Farmacia
+        Paraná</h2>
+      <div class="btn-edit "><a href="#" class="btn-right">
+          <fa-icon [icon]="faPenToSquare"></fa-icon>
+        </a></div>
+    </mat-card-content>
   </div>
 </div>
 
-<div class="container bg-light border-top border_white border-bottom border_dark pt-5">
-  <div class="row pt-5 mt-5">
-    <div class="col-sm-6 col-md-5 col-lg-6 align-self-center">
-      <p class=" text-start text-lg-start text-end fs-1 ms-5">EDUCACION</p>
-    </div>
-    <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0 pb-5 justify-content-between">
-      <p class=" text-start text-lg-start text-end fs-4  ">Febrero 2022 - Actualidad</p>
-      <p class=" text-start text-lg-start text-end fs-2  mt-1">Acompañamientos Personalizados • Ambulatorio •
-        Cambio
-        de Hábitos</p>
-      <p class=" text-start text-lg-start text-end fs-4  mt-2">Marzo 2020 - Actualidad</p>
-      <p class=" text-start text-lg-start text-end fs-2  mt-1">Diseñador gráfico • Entornos digitales •
-        Freelance</p>
-      <p class=" text-start text-lg-start text-end fs-4  mt-2">Septiembre 2015 – marzo 2020</p>
-      <p class=" text-start text-lg-start text-end fs-2  mt-1">Empleado • Encargado de limpieza • Farmacia
-        Paraná</p>
-    </div>
+
+<div
+  class="container border-top border_white ps-5 d-flex flex-row bd-highlight mb-3 d-flex d-flex align-content-between justify-content-between">
+  <mat-card-title class="p-2 bd-highlight d-flex flex-row bd-highlight mb-3 align-items-center ms-5">
+    <h2 class="text-white text-end ms-5 fs-1">EDUCACION</h2>
+  </mat-card-title>
+
+  <div class="p-2 bd-highlight ">
+    <mat-card-content class="d-flex flex-column bd-highlight mb-3 pe-5">
+      <h2 class=" text-white">E.M.M N° 443 José Manuel Estrada, Santo tomé, Santa Fe.</h2>
+      <h2 class="text-white">• Título Polimodal <span class="fs-6">(modalidad de economía y gestión de las
+          organizaciones)</span></h2>
+      <h2 class="text-white">UADER, Paraná, Entre Ríos</h2>
+      <h2 class="text-white">• Licenciatura en Psicología (Cursando Actualmente)</h2>
+      <h2 class="text-white">UNER, Paraná, Entre Ríos</h2>
+      <h2 class="text-white">• Licenciatura en Ciencias Políticas (Cursando Actualmente)</h2>
+      <div class="btn-edit "><a href="#" class="btn-right">
+          <fa-icon [icon]="faPenToSquare"></fa-icon>
+        </a></div>
+    </mat-card-content>
   </div>
+</div>
+
+
+<div class="container border-top border_white ps-5 d-flex flex-column bd-highlight mb-3 justify-content-around">
+
+  <mat-card-title class="p-2 bd-highlight d-flex flex-column bd-highlight mb-3">
+    <h2 class="text-white text-center fs-1">HABILIDADES</h2>
+
+    <h2 class="text-white text-center fs-2">Tecnológicas</h2>
+    <div class="d-flex flex-column bd-highlight mb-3 justify-content-evenly">
+      <p class="text-center fs-4">HTML5</p>
+      <p class="text-center fs-4">CSS3</p>
+      <p class="text-center fs-4">JavaScript</p>
+
+      <p class="text-center fs-4">Bootstrap</p>
+      <p class="text-center fs-4">Angular</p>
+      <p class="text-center fs-4">MySql</p>
+
+
+
+
+      <p class="text-center fs-4">TypeScript</p>
+      <p class="text-center fs-4">Java</p>
+      <p class="text-center fs-4">AdobeCloud</p>
+
+
+    </div>
+  </mat-card-title>
+
+  <mat-card-title class="p-2 bd-highlight">
+    <h2 class="text-white text-center fs-2">Blandas</h2>
+  </mat-card-title>
+
+  <p class="text-center fs-4">Comunicación</p>
+  <p class="text-center fs-4">Escucha</p>
+  <p class="text-center fs-4">Empatía</p>
+
+</div>
+
+
+<!--
 
   <div class="container-fluid d-inline-flex p-2 bd-highlight">
     <div class="container">
@@ -131,3 +195,4 @@
 
 
     </div>
+-->

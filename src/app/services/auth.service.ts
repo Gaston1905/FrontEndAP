@@ -16,6 +16,15 @@ export class AuthService {
     }
   }
 
+  async register(email: string, password: string) {
+    try {
+      return await this.afauth.createUserWithEmailAndPassword(email, password);
+    } catch (err) {
+      console.log('Error en login: ', err);
+      return null;
+    }
+  }
+
   getUserLogged() {
     return this.afauth.authState;
   }
