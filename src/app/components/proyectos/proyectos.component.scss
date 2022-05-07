@@ -1,3 +1,24 @@
 .row {
   padding: 20px;
 }
+
+.img-fluid {
+  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(100%);
+  filter: gray;
+}
+
+.img-fluid:hover {
+  -webkit-filter: none;
+  -webkit-filter: none;
+  filter: none;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+}
+
+p {
+  background-color: #0e77bb;
+  box-shadow: 0 10px 30px -15px;
+}
