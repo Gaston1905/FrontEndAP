@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserlogedService } from 'src/app/services/userloged.service';
 
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
-import { faUserLock } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-header',
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   showlogin: boolean = false;
   subscription?: Subscription;
   userLogged = this.authService.getUserLogged();
-  faUserLock = faUserLock;
+
 
   constructor(
     private userloged: UserlogedService,

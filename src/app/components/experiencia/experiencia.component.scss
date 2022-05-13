@@ -1,8 +1,37 @@
 .row {
-  padding: 20px;
+  padding: 150px 20px 100px 20px;
 }
 
 h2,
 h3 {
   display: inline;
+}
+
+#titulo {
+  font-size: 26px;
+}
+
+#titulo::after {
+  background-color: rgb(225, 222, 222);
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 200px;
+  height: 1px;
+  margin-top: -10px;
+  margin-left: -206px;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  #acomodo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 15%;
+  }
 }

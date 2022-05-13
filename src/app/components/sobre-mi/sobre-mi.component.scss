@@ -1,0 +1,83 @@
+.row {
+  padding: 25px;
+}
+
+#titulo {
+  font-size: 26px;
+}
+
+#titulo::after {
+  background-color: rgb(225, 222, 222);
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 150px;
+  height: 1px;
+  margin-top: -10px;
+  margin-left: 170px;
+}
+
+#descripcion {
+  padding: 5px;
+  margin-top: -100px;
+  background-color: #0e77bb;
+  box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.img-thumbnail {
+  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(100%);
+  filter: gray;
+}
+
+.img-thumbnail:hover {
+  -webkit-filter: none;
+  -webkit-filter: none;
+  filter: none;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+}
+#epigrafe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-right: 7rem;
+  margin-right: 4rem;
+}
+
+#posicion-epigrafe {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+#posicion-epigrafe::after {
+  background-color: rgb(225, 222, 222);
+  content: "";
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 1px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#acomodo-referencia {
+  margin-right: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  #descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 15%;
+  }
+}

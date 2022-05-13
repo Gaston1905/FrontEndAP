@@ -6,3 +6,32 @@ h2,
 h3 {
   display: inline;
 }
+
+#titulo {
+  font-size: 26px;
+}
+
+#titulo::after {
+  background-color: rgb(225, 222, 222);
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 210px;
+  height: 1px;
+  margin-top: -10px;
+  margin-left: 135px;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  #acomodo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 15%;
+  }
+}

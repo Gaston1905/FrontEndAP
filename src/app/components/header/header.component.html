@@ -1,13 +1,33 @@
-<header>
-  <nav class="navbar fixed-top navbar-light bg-dark-disabled-color border-bottom border-white">
+<header class="container">
+  <nav class="navbar fixed-top navbar-light bg-dark-disabled-color border-bottom border-white align-items-center">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://github.com/Gaston1905/portfolio/blob/master/images/APLogo-20-20.png?raw=true" alt=""
           width="30" height="24" class="d-inline-block align-text-top">
         <span class=text-light>Argentina Programa</span>
       </a>
-      <ul class="navbar-nav ml-auto d-flex flex-row-reverse bd-highlight">
-
+      <ul class="navbar-nav ml-auto d-flex flex-row bd-highlight align-items-center">
+        <li class=" nav-item active ms-1 me-1">
+          <a class="nav-link  active text-white" id="indice"
+            href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/">Sobre
+            mi</a>
+        </li>
+        <li class="nav-item active ms-1 me-1">
+          <a class="nav-link active text-white" id="indice" href="https://www.instagram.com/pitu_gaitan/">
+            Experiencia y
+            Educación</a>
+        </li>
+        <li class="nav-item active ms-1 me-1">
+          <a class="nav-link active text-white" id="indice" href="https://github.com/Gaston1905">Habilidades</a>
+        </li>
+        <li class="nav-item active ms-1 me-1">
+          <a class="nav-link active text-white" id="indice"
+            href="https://www.facebook.com/pitu.pitu.7982/">Proyectos</a>
+        </li>
+        <li class="nav-item active ms-1 me-1">
+          <a class="nav-link active text-white" id="indice"
+            href="https://www.facebook.com/pitu.pitu.7982/">Contactos</a>
+        </li>
         <!--             Estado Logeado            -->
 
         <nav class="navbar navbar-light bg-light" *ngIf="userLogged|async as user">
@@ -19,46 +39,54 @@
         </nav>
 
         <!-------------------------------------------->
-        <app-button class="btn btn-sm" color="{{showlogin ? 'red' : 'lightblue'}}"
+        <app-button class="btn btn-sm" color="{{showlogin ? 'red' : '#0e77bb'}}"
           text="{{showlogin  ? 'Logout' : 'Login'}}" (click)="toggleLogin()">
         </app-button>
-        <li class=" nav-item active ms-1 me-1">
-          <a class="nav-link" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIN.png?raw=true" class="logoIn"></a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active" href="https://www.instagram.com/pitu_gaitan/"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIG.png?raw=true" class="logoIg"></a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active" href="https://github.com/Gaston1905"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgGIT.png?raw=true"
-              class="logoGithub"></a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active" href="https://www.facebook.com/pitu.pitu.7982/"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgFB.png?raw=true" class="logoFb"></a>
-        </li>
       </ul>
+
     </div>
+
+
 
   </nav>
 
 
+
   <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="min-whidt1">
+
+      <div class="col-10 col-sm-8 col-lg-6" id="min-whidt-center">
         <img src="https://github.com/Gaston1905/portfolio/blob/master/images/Sin-t%C3%ADtulo-2.png?raw=true"
           class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" loading="lazy">
       </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3 fs-1 text-white">GASTON GAITAN</h1>
+
+      <div class="col-lg-6 d-flex flex-column align-items-center">
+        <h1 class=" display-5 fw-bold lh-1 mb-3 fs-1 text-white">GASTON <span class="celeste">GAITAN</span></h1>
         <p class="lead fs-3 text-white">Desarrollador Full Stack Jr.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
-        </div>
       </div>
     </div>
   </div>
+
+
+  <div class="container social">
+    <ul class="estilo-social">
+      <li><a class="nav-link" id="link-animado" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
+            src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIN.png?raw=true"></a></li>
+      <li><a class="nav-link active" id="link-animado" href="https://www.instagram.com/pitu_gaitan/"><img
+            src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIG.png?raw=true"></a></li>
+      <li><a class="nav-link active" id="link-animado" href="https://github.com/Gaston1905"><img
+            src="https://github.com/Gaston1905/portfolio/blob/master/images/imgGIT.png?raw=true"></a></li>
+      <li><a class="nav-link active" id="link-animado" href="https://www.facebook.com/pitu.pitu.7982/"><img
+            src="https://github.com/Gaston1905/portfolio/blob/master/images/imgFB.png?raw=true"></a></li>
+    </ul>
+  </div>
+
+  <div class="container email">
+    <ul class="estilo-email">
+      <li><a class="nav-link active" id="link-animado" href="gaston.gaitan04@gmail.com">gaston.gaitan04@gmail.com</a>
+      </li>
+    </ul>
+  </div>
+
+
 </header>
