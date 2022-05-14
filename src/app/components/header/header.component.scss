@@ -10,7 +10,7 @@ btn-sm {
   position: relative;
   text-decoration: none;
   display: inline-block;
-  color: black;
+  color: #0e77bb;
   padding: 0 1px;
   transition: color ease 0.3s;
 
@@ -111,15 +111,14 @@ btn-sm {
 
 .navbar {
   backdrop-filter: blur(10px);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.menu-fixed {
-  position: fixed;
-  z-index: 1000;
+.new-nav {
+  position: sticky;
   top: 0;
-  max-width: 1000px;
-  width: 100%;
-  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
 }
 
 .social {

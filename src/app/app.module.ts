@@ -24,6 +24,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollDirective } from './directive/scroll.directive';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     HabilidadesComponent,
     ProyectosComponent,
     FooterComponent,
+    ScrollDirective,
   ],
   imports: [
     BrowserModule,

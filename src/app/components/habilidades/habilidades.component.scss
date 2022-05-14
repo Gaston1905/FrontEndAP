@@ -1,5 +1,5 @@
 #principio {
-  padding: 300px 20px 0 20px;
+  padding: 0 20px 0 20px;
 }
 .row {
   padding: 50px 0 150px 0;
@@ -19,4 +19,22 @@
   height: 1px;
   margin-top: -10px;
   margin-left: 225px;
+}
+
+.rectangle {
+  height: 100px;
+  margin-top: 45px;
+  transform: skewY(4deg);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+}
+
+#acomodo {
+  margin-top: -3rem;
+  background-color: rgb(225, 222, 222);
+}
+
+.bg-gray {
+  background-color: rgb(225, 222, 222);
 }

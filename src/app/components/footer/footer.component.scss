@@ -8,8 +8,8 @@ footer {
   text-align: center;
 }
 .btn {
-  color: #0e77bb;
-  border: solid 1px #0e77bb;
+  color: rgb(225, 222, 222);
+  border: solid 1px rgb(225, 222, 222);
 }
 
 .contacto {
@@ -23,5 +23,24 @@ footer {
 
 .agradecimiento {
   margin-bottom: 4rem;
-  font-size: 4rem;
+  font-size: 5rem;
+  transform: skewY(-4deg);
+}
+
+#link-animado {
+  padding: 0.25rem 0.25rem;
+  margin: 0.25rem -0.25rem;
+  border-radius: 15%;
+  box-shadow: inset 0 0 0 0 3px;
+  transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  color: white;
+
+  &:hover {
+    box-shadow: inset 100px 0 0 0 1;
+    background-color: #0e77bb;
+    -webkit-transition: background-color 600ms linear;
+    -ms-transition: background-color 600ms linear;
+    transition: background-color 600ms linear;
+    border-radius: 15%;
+  }
 }
