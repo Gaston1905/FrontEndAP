@@ -359,6 +359,7 @@
     "negotiator": "^0.6.3",
     "neo-async": "^2.6.2",
     "ng-circle-progress": "^1.6.0",
+    "ngx-scrollreveal": "^3.0.0",
     "node-forge": "^0.10.0",
     "node-gyp": "^8.4.1",
     "node-releases": "^2.0.2",
