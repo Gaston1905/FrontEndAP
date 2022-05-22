@@ -24,6 +24,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     HabilidadesComponent,
     ProyectosComponent,
     FooterComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatProgressSpinnerModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

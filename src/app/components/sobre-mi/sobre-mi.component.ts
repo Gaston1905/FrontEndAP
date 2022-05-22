@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 
+
+
 @Component({
   selector: 'app-sobre-mi',
   templateUrl: './sobre-mi.component.html',
@@ -9,6 +11,8 @@ import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 export class SobreMiComponent implements OnInit {
   constructor() {}
   faPenToSquare = faPenToSquare;
+  
 
-  ngOnInit(): void {}
+  ngOnInit(): void { 
+}
 }
