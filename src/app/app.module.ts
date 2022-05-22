@@ -25,6 +25,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+	
+
+
+
+
+
 
 
 @NgModule({
