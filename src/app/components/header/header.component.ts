@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserlogedService } from 'src/app/services/userloged.service';
-
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
-import { persona } from 'src/app/model/persona.model';
-import { PersonaService } from 'src/app/services/persona.service';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
+import { Usuario } from 'src/app/model/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
+
 
 
 @Component({
@@ -15,8 +15,10 @@ import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  public usuario: Usuario | undefined;
+  public editUsuario: Usuario | undefined;
   title: string = 'portfolio';
-  persona: persona = new persona("", "", "");
+  
   showlogin: boolean = false;
   subscription?: Subscription;
   userLogged = this.authService.getUserLogged();
@@ -25,7 +27,8 @@ export class HeaderComponent implements OnInit {
 
 
   constructor(
-    public personaService: PersonaService,
+    private usuarioservice: UsuarioService,
+    
     private userloged: UserlogedService,
     private authService: AuthService
   ) {
@@ -35,8 +38,18 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data =>{ this.persona = data}),
-    this.personaService.editPersona().subscribe(data=>{this.persona = data})
+    this.getUser();
+  }
+
+  public getUser():void{
+    this.usuarioservice.getUser().subscribe({
+      next: (response: Usuario) =>{
+        this.usuario=response;
+      },
+      error:(HttpErrorResponse)=>{
+        alert(Error);
+      }
+    })
   }
 
   toggleLogin() {

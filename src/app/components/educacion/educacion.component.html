@@ -6,31 +6,16 @@
 
     <div class="offset-lg-2 col-lg-10 pt-5 text-center" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50"
       data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-      data-aos-anchor-placement="top-center">
+      data-aos-anchor-placement="top-center" *ngFor="let educacion of educaciones">
       <ul>
         <li>
-          <h2 class="text-white">Acompañamientos Personalizados • Ambulatorio • Cambio de Hábitos</h2> - <h3>(years)
+          <h2 class="text-white">{{educacion.nombreEdu}}</h2> - <h3>
+            {{educacion.fechaEdu}}
           </h3>
         </li>
-        <p class="text-white">Febrero 2022 - Actualidad
-          Acompañamientos Personalizados • Ambulatorio • Cambio de Hábitos</p>
+        <p class="text-white">{{educacion.tituloEdu}}</p>
       </ul>
-      <ul>
-        <li>
-          <h2 class="text-white">Acompañamientos Personalizados • Ambulatorio • Cambio de Hábitos</h2> - <h3>(years)
-          </h3>
-        </li>
-        <p class="text-white">Febrero 2022 - Actualidad
-          Acompañamientos Personalizados • Ambulatorio • Cambio de Hábitos</p>
-      </ul>
-      <ul>
-        <li>
-          <h2 class="text-white">Acompañamientos Personalizados • Ambulatorio • Cambio de Hábitos</h2> - <h3>(years)
-          </h3>
-        </li>
-        <p class="text-white">Febrero 2022 - Actualidad
-          Acompañamientos Personalizados • Ambulatorio • Cambio de Hábitos</p>
-      </ul>
+
     </div>
   </div>
 </div>

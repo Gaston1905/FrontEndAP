@@ -58,9 +58,9 @@
           class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" loading="lazy">
       </div>
 
-      <div class="col-lg-6 d-flex flex-column align-items-center">
-        <h1 class=" display-5 fw-bold lh-1 mb-3 fs-1 text-white">{{persona.nombre}} <span
-            class="celeste">{{persona.apellido}}</span><a href="#" class="btn-right btn-sm">
+      <div class="col-lg-6 d-flex flex-column align-items-center" *ngIf="usuario">
+        <h1 class=" display-5 fw-bold lh-1 mb-3 fs-1 text-white">{{usuario.nombre}}<span class="celeste">
+            {{usuario.apellido}}</span><a href="#" class="btn-right btn-sm">
             <fa-icon [icon]="faPenToSquare">
             </fa-icon>
           </a><a href="#" class="btn-right btn-sm">
@@ -68,7 +68,7 @@
             </fa-icon>
           </a>
         </h1>
-        <p class="lead fs-3 text-white">{{persona.img}}<a href="#" class="btn-right btn-sm">
+        <p class="lead fs-3 text-white">{{usuario.titulo}}<a href="#" class="btn-right btn-sm">
             <fa-icon [icon]="faPenToSquare">
             </fa-icon>
           </a><a href="#" class="btn-right btn-sm">
