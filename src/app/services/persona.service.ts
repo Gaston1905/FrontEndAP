@@ -17,7 +17,7 @@ export class PersonaService {
   }
 
   public editPersona(): Observable<persona>{
-    return this.http.get<persona>(this.URL+ 'editar/{id}')
+    return this.http.get<persona>(this.URL+ 'editar/{id}');
   }
 
   

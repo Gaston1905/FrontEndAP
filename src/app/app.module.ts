@@ -26,6 +26,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 	
+import { RouterModule, Routes} from '@angular/router';
 
 
 
