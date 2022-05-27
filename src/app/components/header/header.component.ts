@@ -6,7 +6,7 @@ import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
 import { Usuario } from 'src/app/model/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
-
+import{ HttpErrorResponse } from '@angular/common/http'
 
 
 @Component({
@@ -46,8 +46,8 @@ export class HeaderComponent implements OnInit {
       next: (response: Usuario) =>{
         this.usuario=response;
       },
-      error:(HttpErrorResponse)=>{
-        alert(Error);
+      error:(error: HttpErrorResponse)=>{
+        alert(error.message);
       }
     })
   }

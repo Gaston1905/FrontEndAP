@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -25,14 +26,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-	
-import { RouterModule, Routes} from '@angular/router';
 
-
-
-
-
-
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -59,7 +54,6 @@ import { RouterModule, Routes} from '@angular/router';
     MatProgressSpinnerModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent],

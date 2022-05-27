@@ -1,21 +1,104 @@
-<div class="container">
-  <div class="row" id="acomodo">
-    <div class="col-md-3 offset-md-5">
-      <h2 class="text-white " id="titulo">Educación</h2>
+<div class="row edu main-container" id="acomodo">
+  <div class="col-md-3 offset-md-5">
+    <h2 class="text-white " id="titulo">Educación</h2>
+  </div>
+  <a class="btn-right btn-sm nav-link">
+    <fa-icon [icon]="faPenToSquare" (click)="onOpenModal('edit, educacion')">
+    </fa-icon>
+  </a><a href="#" class="btn-right btn-sm">
+    <fa-icon [icon]="faXmarkCircle">
+    </fa-icon>
+  </a>
+
+  <div>
+    <div class="text-center">
+      <button type="button" class="btn btn-success btn-sm" (click)="onOpenModal('add')"><a class="nav-link"
+          style="color: aliceblue">Añadir
+          Educación<span class="sr-only"> (current)</span>
+        </a>
+      </button>
+    </div>
+  </div>
+  <div class="row align-items" *ngFor="let educacion of educaciones">
+
+    <div>
+
+      <div class="col text-center">
+        <a (click)="onOpenModal('edit', educacion)" class="btn btn-primary tooltips" data-placement="top"
+          data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i>
+        </a>
+        <a (click)="onOpenModal('delete', educacion)" class="btn btn-secondary tooltips" data-placement="top"
+          data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-pencil"></i>
+        </a>
+      </div>
+
+      <div class="col-md-6 offset-md-5  text-center">
+        <ul>
+          <li>
+            <h2 class=" text-white">
+              {{educacion.fechaEdu}} - {{educacion.tituloEdu}} |
+              {{educacion.nombreEdu}}
+            </h2>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="offset-lg-2 col-lg-10 pt-5 text-center" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50"
-      data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-      data-aos-anchor-placement="top-center" *ngFor="let educacion of educaciones">
-      <ul>
-        <li>
-          <h2 class="text-white">{{educacion.nombreEdu}}</h2> - <h3>
-            {{educacion.fechaEdu}}
-          </h3>
-        </li>
-        <p class="text-white">{{educacion.tituloEdu}}</p>
-      </ul>
+    <div id="main-container">
+
+      <div class="modal fade" id="addEducacionModal" tabindex="-1" role="dialog"
+        aria-labelledby="addEducacionModalLabel" aria-hidden="true">
+
+        | <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addEducacionModalLabel"> Añadir Educación</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form #addForm="ngForm" (ngSubmit)="onAddEducacion(addForm)">
+                <div class="form-group">
+                  <label for="nombreEdu"> Nombre</label>
+                  <input type="text" ngModel name="nombreEdu" class="form-control" id="nombreEdu" placeholder="Nombre"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="tituloEdu"> Título</label>
+                  <input type="text" ngModel name="tituloEdu" class="form-control" id="tituloEdu" placeholder="Título"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="fechaEdu"> Fecha</label>
+                  <input type="text" ngModel name="fechaEdu" class="form-control" id="fechaEdu" placeholder="Fecha"
+                    required>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="add-educacion-form" class="btn btn-secondary" data-dismiss="modal">
+                    Cerrar
+                  </button>
+                  <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">
+                    Añadir Cambios
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
 
     </div>
   </div>
-</div>
