@@ -1,7 +1,6 @@
-export interface Usuario{
-  id?:number;
+export interface Usuario {
+  id: number;
   nombre: String;
   apellido: String;
   titulo: String;
-
 }

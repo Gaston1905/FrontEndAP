@@ -12,8 +12,12 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) {}
 
-  public getUser(): Observable<Usuario> {
+  public getUsuario(): Observable<Usuario> {
     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`);
+  }
+
+  public addUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>(`${this.apiServerUrl}/usuario/add`, usuario);
   }
 
   public updateUsuario(usuario: Usuario): Observable<Usuario> {
@@ -21,5 +25,9 @@ export class UsuarioService {
       `${this.apiServerUrl}/usuario/update`,
       usuario
     );
+  }
+
+  public deleteUsuario(Id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiServerUrl}/usuario/delete/${Id}`);
   }
 }

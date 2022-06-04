@@ -1,56 +1,5 @@
-<header class="container">
-  <nav class="navbar sticky-top bg-dark-disabled-color  align-items-center" appScroll>
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://github.com/Gaston1905/portfolio/blob/master/images/APLogo-20-20.png?raw=true" alt=""
-          width="30" height="24" class="d-inline-block align-text-top">
-        <span class=text-light>Argentina Programa</span>
-      </a>
-      <ul class="navbar-nav ml-auto d-flex flex-row bd-highlight align-items-center">
-        <li class=" nav-item active ms-1 me-1">
-          <a class="nav-link  active fw-bold" id="indice"
-            href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/">Sobre
-            mi</a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active fw-bold" id="indice" href="https://www.instagram.com/pitu_gaitan/">
-            Experiencia y
-            Educación</a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active fw-bold" id="indice" href="https://github.com/Gaston1905">Habilidades</a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active fw-bold" id="indice" href="https://www.facebook.com/pitu.pitu.7982/">Proyectos</a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active fw-bold" id="indice" href="https://www.facebook.com/pitu.pitu.7982/">Contactos</a>
-        </li>
-        <!--             Estado Logeado            -->
-
-        <nav class="navbar navbar-light bg-light" *ngIf="userLogged|async as user">
-          <div class="container">
-            <a class="navbar-brand" href="#">
-              <img *ngIf="user.photoURL" src="{{user.photoURL}}" alt="" width="30" height="24">{{user.email}}
-            </a>
-          </div>
-        </nav>
-
-        <!-------------------------------------------->
-        <app-button class="btn btn-sm" color="{{showlogin ? 'red' : '#0e77bb'}}"
-          text="{{showlogin  ? 'Logout' : 'Login'}}" (click)="toggleLogin()">
-        </app-button>
-      </ul>
-
-    </div>
-
-
-
-  </nav>
-
-
-
-  <div class="container col-xxl-8 px-4 py-3">
+<header class="main-container">
+  <div class=" container col-xxl-8 px-4 py-3">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="min-whidt1">
 
       <div class="col-10 col-sm-8 col-lg-6" id="min-whidt-center">
@@ -58,23 +7,34 @@
           class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" loading="lazy">
       </div>
 
+
+
       <div class="col-lg-6 d-flex flex-column align-items-center" *ngIf="usuario">
+        <div>
+          <div class="text-center">
+            <button type="button" class="btn btn-success btn-sm" (click)="onOpenModal('add')"><a class="nav-link"
+                style="color: aliceblue">Añadir
+                Educación<span class="sr-only"> (current)</span>
+              </a>
+            </button>
+          </div>
+        </div>
         <h1 class=" display-5 fw-bold lh-1 mb-3 fs-1 text-white">{{usuario.nombre}}<span class="celeste">
-            {{usuario.apellido}}</span><a href="#" class="btn-right btn-sm">
+            {{usuario.apellido}}</span>
+
+          <a (click)="onOpenModal('edit', usuario)" class="btn text-primary tooltips " data-placement="top"
+            data-toggle="tooltip" data-original-title="edit">
             <fa-icon [icon]="faPenToSquare">
             </fa-icon>
-          </a><a href="#" class="btn-right btn-sm">
+          </a>
+
+          <a (click)="onOpenModal('delete', usuario)" class="btn text-danger  tooltips" data-placement="top"
+            data-toggle="tooltip" data-original-title="delete">
             <fa-icon [icon]="faXmarkCircle">
             </fa-icon>
           </a>
         </h1>
-        <p class="lead fs-3 text-white">{{usuario.titulo}}<a href="#" class="btn-right btn-sm">
-            <fa-icon [icon]="faPenToSquare">
-            </fa-icon>
-          </a><a href="#" class="btn-right btn-sm">
-            <fa-icon [icon]="faXmarkCircle">
-            </fa-icon>
-          </a></p>
+        <p class="lead fs-3 text-white">{{usuario.titulo}}</p>
 
       </div>
 
@@ -103,4 +63,144 @@
   </div>
 
 
+
+  <!-------------MODAL AÑADIR USUARIO------------>
+
+  <div class="modal fade" id="addUsuarioModal" tabindex="-1" role="dialog" aria-labelledby="addUsuarioModalLabel"
+    aria-hidden="true">
+
+    | <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addUsuarioModalLabel"> Añadir Educación</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #addForm="ngForm" (ngSubmit)="onAddUsuario(addForm)">
+
+            <div class="form-group">
+              <label for="nombre"> Nombre</label>
+              <input type="text" ngModel name="nombre" class="form-control" id="nombre" placeholder="Nombre" required />
+            </div>
+
+            <div class="form-group">
+              <label for="apellido"> Apellido</label>
+              <input type="text" ngModel name="apellido" class="form-control" id="apellido" placeholder="Apellido"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="titulo"> Título</label>
+              <input type="text" ngModel name="titulo" class="form-control" id="titulo" placeholder="Título" required />
+            </div>
+
+
+            <div class="modal-footer">
+              <button type="button" id="add-usuario-form" class="btn btn-secondary" data-dismiss="modal">
+                Cerrar
+              </button>
+              <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">
+                Añadir Cambios
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-------------MODAL EDITAR USUARIO------------>
+
+  <div class="modal fade" id="editUsuarioModal" tabindex="-1" role="dialog" aria-labelledby="usuarioEditModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="usuarioEditModalLabel">
+            Editar Usuario {{ editUsuario?.nombre }}
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #editForm="ngForm">
+
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="number" ngModel="{{ editUsuario?.nombre }}" name="nombre" class="form-control" id="nombre"
+                placeholder="Nombre" />
+            </div>
+
+
+            <input type="hidden" ngModel="{{ editUsuario?.id }}" name="id" class="form-control" id="id"
+              placeholder="" />
+
+
+
+
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" ngModel="{{ editUsuario?.apellido }}" name="apellido" class="form-control"
+                id="apellido" placeholder="Apellido" />
+            </div>
+
+
+            <div class="form-group">
+              <label for="titulo">Título</label>
+              <input type="text" ngModel="{{ editUsuario?.titulo }}" name="titulo" class="form-control" id="titulo"
+                placeholder="Título" />
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">
+                Cerrar
+              </button>
+              <button (click)="onUpdateUsuario(editForm.value)" data-dismiss="modal" class="btn btn-primary">
+                Salvar Cambios
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-------------MODAL ELIMINAR USUARIO------------>
+
+  <div data-bs-toggle="modal" data-bs-target="#deleteModelLabel" class="modal fade" id="deleteUsuarioModal"
+    tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleModelLabel">Eliminar Usuario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <p>
+            ¿Quiere eliminar este usuario?
+            {{ deleteUsuario?.nombre}} {{ deleteUsuario?.apellido}}
+          </p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            No
+          </button>
+          <button (click)="onDeleteUsuario(deleteUsuario!)" class="btn btn-danger" data-dismiss="modal">
+            Si
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
