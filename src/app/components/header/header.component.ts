@@ -1,13 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
-import { Usuario } from 'src/app/model/usuario';
-import { UsuarioService } from 'src/app/services/usuario.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { NgForm } from '@angular/forms';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
+import { InfoService } from 'src/app/services/info.service';
+import { Info } from 'src/app/model/info';
 
 @Component({
   selector: 'app-header',
@@ -15,85 +13,57 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  public usuario: Usuario | undefined;
-  public editUsuario: Usuario | undefined;
-  public deleteUsuario: Usuario | undefined;
-  title: string = 'portfolio';
+  public info: Info | undefined;
+  public editInfo: Info | undefined;
+
   subscription?: Subscription;
 
   faPenToSquare = faPenToSquare;
   faXmarkCircle = faXmarkCircle;
 
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(
+    private infoService: InfoService,
+    private autenticacionService: AutenticacionService
+  ) {}
+
+  isloged = () => this.autenticacionService.loggedIn();
 
   ngOnInit(): void {
-    this.getUsuario();
+    this.getInfo();
   }
 
-  public getUsuario(): void {
-    this.usuarioService.getUsuario().subscribe({
-      next: (response: Usuario) => {
-        this.usuario = response;
+  public getInfo(): void {
+    this.infoService.getInfo().subscribe({
+      next: (response: Info) => {
+        this.info = response;
       },
       error: (error: HttpErrorResponse) => {
-        alert(error.message);
+        console.log('error');
       },
     });
   }
 
-  public onOpenModal(mode: String, usuario?: Usuario): void {
+  public onOpenModal(mode: string, info?: Info): void {
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
+    button.type = 'button';
     button.style.display = 'none';
     button.setAttribute('data-toggle', 'modal');
-    if (mode === 'add') {
-      button.setAttribute('data-target', '#addUsuarioModal');
-    } else if (mode === 'delete') {
-      this.deleteUsuario = usuario;
-      button.setAttribute('data-target', '#deleteUsuarioModal');
-    } else if (mode === 'edit') {
-      this.editUsuario = usuario;
-      button.setAttribute('data-target', '#editUsuarioModal');
-    }
+
+    button.setAttribute('data-target', '#editInfoModal');
 
     container?.appendChild(button);
     button.click();
   }
-
-  public onAddUsuario(addForm: NgForm): void {
-    document.getElementById('add-usuario-form')?.click();
-    this.usuarioService.addUsuario(addForm.value).subscribe({
-      next: (response: Usuario) => {
+  public onUpdateInfo(info: Info): void {
+    this.editInfo = info;
+    this.infoService.updateInfo(info).subscribe({
+      next: (response: Info) => {
         console.log(response);
-        this.getUsuario();
-        addForm.reset();
+        this.getInfo();
       },
       error: (error: HttpErrorResponse) => {
-        alert(error.message);
-        addForm.reset();
-      },
-    });
-  }
-
-  public onUpdateUsuario(usuario: Usuario) {
-    this.editUsuario = usuario;
-    document.getElementById('add-usuario-form')?.click();
-    this.usuarioService.updateUsuario(usuario).subscribe({
-      next: (response: Usuario) => {
-        console.log(response);
-        this.getUsuario();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
-
-  public onDeleteUsuario(usuario: Usuario): void {
-    this.usuarioService.deleteUsuario(usuario.id).subscribe({
-      next: (response: void) => {
-        console.log(response);
-        this.getUsuario();
+        console.log('error');
       },
     });
   }

@@ -11,13 +11,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ButtonComponent } from './components/button/button.component';
-import { LoginComponent } from './components/login/login.component';
-import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
-import { ExperienciaComponent } from './components/experiencia/experience.component';
 
-import { HabilidadesComponent } from './components/habilidades/habilidades.component';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
@@ -30,21 +26,23 @@ import { environment } from 'src/environments/environment';
 import { InterceptorService } from './services/interceptor.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EducationComponent } from './components/education/education.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ButtonComponent,
-    LoginComponent,
-    SobreMiComponent,
-    ExperienciaComponent,
+    ExperienceComponent,
     EducationComponent,
-    HabilidadesComponent,
-    ProyectosComponent,
+
     FooterComponent,
     PortfolioComponent,
     NavbarComponent,
+    AboutMeComponent,
+    SkillsComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,

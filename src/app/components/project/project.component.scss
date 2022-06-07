@@ -33,18 +33,6 @@ p {
   font-size: 26px;
 }
 
-#titulo::after {
-  background-color: rgb(225, 222, 222);
-  content: "";
-  display: block;
-  position: relative;
-  top: -5px;
-  width: 210px;
-  height: 1px;
-  margin-top: -10px;
-  margin-left: 125px;
-}
-
 .card {
   box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);

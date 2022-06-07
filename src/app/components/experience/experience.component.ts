@@ -7,13 +7,14 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { Experience } from 'src/app/model/experience';
 import { ExperienceService } from 'src/app/services/experience.service';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
 })
-export class ExperienciaComponent implements OnInit {
+export class ExperienceComponent implements OnInit {
   public experiences: Experience[] = [];
   public editExperience: Experience | undefined;
   public deleteExperience: Experience | undefined;
@@ -23,8 +24,11 @@ export class ExperienciaComponent implements OnInit {
 
   constructor(
     private experienceService: ExperienceService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private autenticacionService: AutenticacionService
   ) {}
+
+  isloged = () => this.autenticacionService.loggedIn();
 
   ngOnInit(): void {
     this.getExperience();

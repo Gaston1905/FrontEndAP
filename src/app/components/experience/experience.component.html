@@ -1,5 +1,5 @@
-<div class="container  pt-5">
-  <div class="row" id="acomodo">
+<div class="container  pt-5" id="arrangement">
+  <div class="row">
     <div class="col-md-3 offset-md-3">
       <h2 class="text-white " id="titulo">Experiencia</h2>
     </div>
@@ -7,7 +7,7 @@
 
 
   <div>
-    <div class="text-center">
+    <div *ngIf="isloged()" class="text-center">
       <button type="button" class="btn btn-success btn-sm" (click)="onOpenModal('add')"><a class="nav-link"
           style="color: aliceblue">Añadir
           Experiencia<span class="sr-only"> (current)</span>
@@ -16,8 +16,8 @@
     </div>
   </div>
 
-  <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
-    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+  <div class="container">
+
     <div id="main-container">
       <div class="row align-items" *ngFor="let experience of experiences">
         <div class="container">
@@ -31,25 +31,23 @@
               {{experience.descExp}}
             </p>
 
-            <a (click)="onOpenModal('edit', experience)" class="btn text-primary tooltips " data-placement="top"
-              data-toggle="tooltip" data-original-title="edit">
+            <a *ngIf="isloged()" (click)="onOpenModal('edit', experience)" class="btn text-primary tooltips "
+              data-placement="top" data-toggle="tooltip" data-original-title="edit">
               <fa-icon [icon]="faPenToSquare">
               </fa-icon>
             </a>
 
-            <a (click)="onOpenModal('delete', experience)" class="btn text-danger  tooltips" data-placement="top"
-              data-toggle="tooltip" data-original-title="delete">
+            <a *ngIf="isloged()" (click)="onOpenModal('delete', experience)" class="btn text-danger  tooltips"
+              data-placement="top" data-toggle="tooltip" data-original-title="delete">
               <fa-icon [icon]="faXmarkCircle">
               </fa-icon>
             </a>
-
           </div>
         </div>
       </div>
-
     </div>
-  </div>
 
+  </div>
 
   <!-------------MODAL AÑADIR------------>
 
