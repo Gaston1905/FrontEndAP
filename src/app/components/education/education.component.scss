@@ -1,5 +1,5 @@
 .row {
-  padding: 20px;
+  padding-top: 20px;
 }
 
 h2,
@@ -11,11 +11,15 @@ h3 {
   font-size: 26px;
 }
 
-@media (max-width: 768px) {
-  #arrangement {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 15%;
+.card {
+  background-color: rgb(225, 222, 222);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 769px) {
+  .data-aos {
+    position: inherit;
   }
 }

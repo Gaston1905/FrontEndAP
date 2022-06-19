@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularFireModule } from '@angular/fire/compat';
 import { MatCardModule } from '@angular/material/card';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -22,13 +21,19 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { environment } from 'src/environments/environment';
 import { InterceptorService } from './services/interceptor.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EducationComponent } from './components/education/education.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectComponent } from './components/project/project.component';
+import { AutenticacionService } from './services/autenticacion.service';
+import { ProjectService } from './services/project.service';
+import { ExperienceService } from './services/experience.service';
+import { SkillsService } from './services/skills.service';
+import { InfoService } from './services/info.service';
+import { EducationService } from './services/education.service';
+import { AboutMeService } from './services/about-me.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,6 @@ import { ProjectComponent } from './components/project/project.component';
     HeaderComponent,
     ExperienceComponent,
     EducationComponent,
-
     FooterComponent,
     PortfolioComponent,
     NavbarComponent,
@@ -47,19 +51,24 @@ import { ProjectComponent } from './components/project/project.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
     FontAwesomeModule,
     MatCardModule,
-    MatProgressSpinnerModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
   ],
   providers: [
+    AboutMeService,
+    EducationService,
+    InfoService,
+    ExperienceService,
+    SkillsService,
+    ProjectService,
+    AutenticacionService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
   ],
   bootstrap: [AppComponent],

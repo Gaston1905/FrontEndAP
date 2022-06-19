@@ -4,6 +4,8 @@ import { ProjectService } from 'src/app/services/project.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Project } from 'src/app/model/project';
 import { NgForm } from '@angular/forms';
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-project',
@@ -14,6 +16,8 @@ export class ProjectComponent implements OnInit {
   public projects: Project[] = [];
   public editProject: Project | undefined;
   public deleteProject: Project | undefined;
+  faPenToSquare = faPenToSquare;
+  faXmarkCircle = faXmarkCircle;
 
   constructor(
     private projectService: ProjectService,

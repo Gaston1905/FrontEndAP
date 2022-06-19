@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Experience } from '../model/experience';
 import { Observable } from 'rxjs';
@@ -8,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ExperienceService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = 'https://arg-programa.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 

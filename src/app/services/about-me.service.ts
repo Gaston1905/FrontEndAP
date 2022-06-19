@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AboutMe } from '../model/about';
@@ -8,7 +7,7 @@ import { AboutMe } from '../model/about';
   providedIn: 'root',
 })
 export class AboutMeService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = 'https://arg-programa.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 

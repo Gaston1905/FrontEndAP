@@ -1,5 +1,5 @@
 .row {
-  padding: 50px 20px 75px 32px;
+  padding: 20px 20px 75px 32px;
   margin-top: -1rem;
 }
 
@@ -50,9 +50,17 @@ p {
 
 #acomodo {
   margin-top: -3rem;
-  background-color: rgb(225, 222, 222);
 }
 
 .bg-gray {
   background-color: rgb(225, 222, 222);
+}
+
+#color {
+  color: #0e77bb;
+}
+
+#underline {
+  text-decoration: underline;
+  text-decoration-color: #0e77bb;
 }

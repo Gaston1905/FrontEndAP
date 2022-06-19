@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -67,4 +68,5 @@ export class AboutMeComponent implements OnInit {
       },
     });
   }
+
 }

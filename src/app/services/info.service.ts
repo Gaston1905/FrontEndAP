@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Info } from '../model/info';
@@ -8,7 +7,7 @@ import { Info } from '../model/info';
   providedIn: 'root',
 })
 export class InfoService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = 'https://arg-programa.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 

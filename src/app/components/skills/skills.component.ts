@@ -4,6 +4,9 @@ import { NgForm } from '@angular/forms';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { SkillsService } from 'src/app/services/skills.service';
 import { Skill } from 'src/app/model/skill';
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
+
 
 @Component({
   selector: 'app-skills',
@@ -14,6 +17,8 @@ export class SkillsComponent implements OnInit {
   public skills: Skill[] = [];
   public editSkill: Skill | undefined;
   public deleteSkill: Skill | undefined;
+  faPenToSquare = faPenToSquare;
+  faXmarkCircle = faXmarkCircle;
 
   constructor(
     private skillsService: SkillsService,
@@ -96,4 +101,5 @@ export class SkillsComponent implements OnInit {
       },
     });
   }
+  
 }

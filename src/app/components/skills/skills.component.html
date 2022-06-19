@@ -1,10 +1,9 @@
-<div class="rectangle bg-gray"></div>
+<div class="rectangle bg-gray rounded-top" id="main-container"></div>
 <div class="container mx-auto" id="arrangement">
 
   <div class="row" id="principio">
-    <div class="col-md-3 offset-md-3 mt-5">
-      <h2 class="text-dark mt-5" id="titulo">Hard & Soft Skills</h2>
-    </div>
+    <h2 class="fs-2 mt-5 pt-3">Hards <span id="color">&</span> Soft</h2>
+    <h2 class="fs-1 fw-bolder" id="color">Skills</h2>
 
     <div *ngIf="isloged()" class="text-center">
       <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
@@ -12,37 +11,42 @@
       </button>
     </div>
 
+
+
     <div class="row">
-      <div class="row skill">
-        <div *ngFor="let skill of skills">
-          <div class=" text-center col-sm-4 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-offset="200"
-            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true"
-            data-aos-once="false" data-aos-anchor-placement="top-center">
+      <div class=" text-center col-sm-4 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="50"
+        data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center" *ngFor="let skill of skills">
 
-            <div class="skillcircle">
-              <a *ngIf="isloged()" (click)="onOpenModal('edit', skill)" class="btn btn-primary tooltips"
-                data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i>
-              </a>
-              <a *ngIf="isloged()" (click)="onOpenModal('delete', skill)" class="btn btn-secondary tooltips"
-                data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i
-                  class="fa-solid fa-xmark"></i></a>
-            </div>
 
-            <div class="card-body titles">
-              <div class="card-title">
-                {{ skill.skillName }}
-                <circle-progress [percent]="skill.percent" [radius]="100" [showUnits]="false" [showImage]="true"
-                  [imageHeight]="70" [imageWidth]="70" [showSubtitle]="true" [titleFontSize]="'25px'"
-                  [outerStrokeWidth]="12" [innerStrokeWidth]="2" [title]="skill.skillName" [imageSrc]="skill.picSkill"
-                  [outerStrokeColor]="'#A6AAAD'" [innerStrokeColor]="'#505255'" [animation]="true"
-                  [animationDuration]="1000"></circle-progress>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+
+        <a *ngIf="isloged()" (click)="onOpenModal('edit', skill)" class="btn text-primary tooltips "
+          data-placement="top" data-toggle="tooltip" data-original-title="edit">
+          <fa-icon [icon]="faPenToSquare">
+          </fa-icon>
+        </a>
+
+        <a *ngIf="isloged()" (click)="onOpenModal('delete', skill)" class="btn text-danger  tooltips"
+          data-placement="top" data-toggle="tooltip" data-original-title="delete">
+          <fa-icon [icon]="faXmarkCircle">
+          </fa-icon>
+        </a>
+
+
+
+
+        <circle-progress [percent]="skill.percent" [radius]="100" [showImage]="true" [imageHeight]="70"
+          [imageWidth]="70" [outerStrokeWidth]="12" [innerStrokeWidth]="2" [imageSrc]="skill.picSkill"
+          [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="1000">
+        </circle-progress>
+        <span style="color:rgb(225,222,222); font-size:0px"> {{ skill.skillName }}
+        </span>
       </div>
     </div>
   </div>
+
 
   <!-- Add Skill Modal -->
   <div class="modal fade" id="addSkillModal" tabindex="-1" role="dialog" aria-labelledby="addSkillModalLabel"
@@ -162,3 +166,4 @@
       <p>No hay skills cargadas.</p>
     </div>
   </div>
+</div>

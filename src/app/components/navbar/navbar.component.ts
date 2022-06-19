@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { faUserLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

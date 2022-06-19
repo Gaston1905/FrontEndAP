@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UsuarioService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = 'https://arg-programa.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 

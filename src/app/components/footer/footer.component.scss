@@ -22,9 +22,33 @@ footer {
 }
 
 .agradecimiento {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   font-size: 5rem;
   transform: skewY(-4deg);
+}
+
+@media (max-width: 425px) {
+  .agradecimiento {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .agradecimiento {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .agradecimiento {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 396px) {
+  .agradecimiento {
+    font-size: 1.4rem;
+  }
 }
 
 #link-animado {
@@ -43,4 +67,14 @@ footer {
     transition: background-color 600ms linear;
     border-radius: 15%;
   }
+}
+
+.collapse {
+  background-color: #666666;
+}
+
+li img {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
 }

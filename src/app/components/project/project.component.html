@@ -1,14 +1,12 @@
-<div class="container mx-auto bg-gray">
+<div class="container mx-auto bg-gray" id="main-container">
   <div class="row">
-    <div class=" col-md-3 offset-md-3" id="acomodo">
-      <h2 class="text-dark " id="titulo">Proyectos</h2>
-    </div>
+    <h2 class="fs-2 pt-1" id="underline">Proyectos</h2>
 
     <div>
       <div *ngIf="isloged()" class="text-center">
         <button type="button" class="btn btn-success btn-sm" (click)="onOpenModal('add')"><a class="nav-link"
             style="color: aliceblue">Añadir
-            Educación<span class="sr-only"> (current)</span>
+            Projecto<span class="sr-only"> (current)</span>
           </a>
         </button>
       </div>
@@ -17,20 +15,34 @@
 
 
 
-    <div class="row row-cols-1 row-cols-md-2 g-4" *NgFor="let project of projects">
+
+    <div class="row row-cols-1 row-cols-md-2 g-4" *ngFor="let project of projects" data-aos="fade-down"
+      data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
+      data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+
       <div class="col">
-        <div class="card ">
-          <img src="{{project.picPro}}" class="card-img-top" alt="...">
+        <div class="card">
+          <img src="{{project.picPro}}" class="card-img-top" alt="Foto de Proyecto">
           <div class="card-body text-white bg-dark">
             <h3 class="card-title text-white bg-dark mb-3">{{project.titlePro}}</h3>
             <p class="text-white bg-dark mb-3">{{project.descPro}}</p>
           </div>
-
         </div>
+
+        <a *ngIf="isloged()" (click)="onOpenModal('edit', project)" class="btn text-primary tooltips "
+          data-placement="top" data-toggle="tooltip" data-original-title="edit">
+          <fa-icon [icon]="faPenToSquare">
+          </fa-icon>
+        </a>
+
+        <a *ngIf="isloged()" (click)="onOpenModal('delete', project)" class="btn text-danger  tooltips"
+          data-placement="top" data-toggle="tooltip" data-original-title="delete">
+          <fa-icon [icon]="faXmarkCircle">
+          </fa-icon>
+        </a>
       </div>
     </div>
   </div>
-
 </div>
 
 

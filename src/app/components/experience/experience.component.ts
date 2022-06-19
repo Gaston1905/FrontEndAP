@@ -9,6 +9,7 @@ import { Experience } from 'src/app/model/experience';
 import { ExperienceService } from 'src/app/services/experience.service';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 
+
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
@@ -104,4 +105,5 @@ export class ExperienceComponent implements OnInit {
       },
     });
   }
+
 }
