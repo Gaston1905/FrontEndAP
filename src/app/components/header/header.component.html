@@ -1,19 +1,21 @@
-<header id="main-container">
+<header class="container-fluid" id="main-container">
   <div class=" container col-xxl-8">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="min-width">
-
+    <div class="row flex-lg-row-reverse align-items-center g-5" id="min-width">
+      <video autoplay="autoplay" muted="muted"  loop="loop"  id="video_background">
+  <source src="../../../assets/Red - 45961.mp4" type="video/mp4" />
+</video>
       <div class="col-10 col-sm-8 col-lg-6" id="min-whidt-center">
-        <img src="https://github.com/Gaston1905/portfolio/blob/master/images/Sin-t%C3%ADtulo-2.png?raw=true"
-          class="d-block mx-lg-auto img-fluid" alt="Foto de Portada" width="400" height="200" loading="lazy">
+        <img src="../../../assets/Sin-título-2.png"
+          class="d-block mx-lg-auto img-fluid" alt="Foto de Portada" id="img-front" loading="lazy">
       </div>
 
       <div class="col-lg-6 d-flex flex-column align-items-center" *ngIf="info">
 
 
-        <h1 class=" display-5 fw-bold lh-1 mb-3 fs-1 text-white">{{info?.nameInfo}}<span class="celeste">
-            {{info?.surnameInfo}}</span>
+        <h1 class=" display-5 fw-bold mb-3  celeste" id="shadow">{{info.nameInfo}}
+            {{info.surnameInfo}}
 
-          <a *ngIf="isloged()" (click)="onOpenModal('edit', info)" class="btn text-primary tooltips "
+          <a *ngIf="isloged()" (click)="onOpenModal('edit', info)" class="btn text-primary tooltips"
             data-placement="top" data-toggle="tooltip" data-original-title="edit">
             <fa-icon [icon]="faPenToSquare">
             </fa-icon>
@@ -21,7 +23,7 @@
 
         </h1>
 
-        <p class="lead fs-3 text-white">{{info?.titleInfo}}</p>
+        <p class="lead fs-3" id="text-shadow">{{info.titleInfo}}</p>
 
       </div>
 

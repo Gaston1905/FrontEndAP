@@ -6,13 +6,37 @@
     margin-bottom: 3.5rem;
   }
 }
+#video_background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  filter: opacity(0.24);
+  }
+
+#img-front {
+  width: 50%;
+  filter: drop-shadow(0 0 0.50rem rgba(1, 1, 85, 0.603));
+}
 
 .celeste {
   color: #0e77bb;
+  letter-spacing: 0.25em;
+  word-spacing: 0.25em;
+  font-size: 3.4em;
 }
 
 @media (max-width: 425px) {
   p {
     font-size: 1rem;
   }
+}
+
+#shadow {
+  text-shadow: 1px 1px 2px black, 0 0 6px blue, 0 0 2px darkblue;
 }

@@ -51,17 +51,23 @@ footer {
   }
 }
 
+.btn {
+  background-color: #000000;
+}
+
 #link-animado {
   padding: 0.25rem 0.25rem;
   margin: 0.25rem -0.25rem;
   border-radius: 15%;
   box-shadow: inset 0 0 0 0 3px;
   transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  color: white;
+
+
 
   &:hover {
     box-shadow: inset 100px 0 0 0 1;
     background-color: #0e77bb;
+    color: white;
     -webkit-transition: background-color 600ms linear;
     -ms-transition: background-color 600ms linear;
     transition: background-color 600ms linear;
@@ -69,12 +75,30 @@ footer {
   }
 }
 
-.collapse {
-  background-color: #666666;
-}
-
 li img {
   width: 30px;
   height: 30px;
   margin: 2px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
+
+#video_background {
+  position: absolute;
+  margin-top: -3.5em;
+  padding-bottom: -3.5em;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  filter: opacity(0.24);
+  }
+
+  #collapseExample {
+    padding-left: .8em;
+  }
