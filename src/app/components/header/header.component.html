@@ -1,9 +1,11 @@
+
+
+
 <header class="container-fluid" id="main-container">
+
   <div class=" container col-xxl-8">
-    <div class="row flex-lg-row-reverse align-items-center g-5" id="min-width">
-      <video autoplay="autoplay" muted="muted"  loop="loop"  id="video_background">
-  <source src="../../../assets/Red - 45961.mp4" type="video/mp4" />
-</video>
+    <div class="row flex-lg-row-reverse align-items-center g-5" id="center-max-width">
+
       <div class="col-10 col-sm-8 col-lg-6" id="min-whidt-center">
         <img src="../../../assets/Sin-título-2.png"
           class="d-block mx-lg-auto img-fluid" alt="Foto de Portada" id="img-front" loading="lazy">
@@ -12,7 +14,7 @@
       <div class="col-lg-6 d-flex flex-column align-items-center" *ngIf="info">
 
 
-        <h1 class=" display-5 fw-bold mb-3  celeste" id="shadow">{{info.nameInfo}}
+        <h1 class="display-5 fw-bold mb-3 celeste" id="shadow">{{info.nameInfo}}
             {{info.surnameInfo}}
 
           <a *ngIf="isloged()" (click)="onOpenModal('edit', info)" class="btn text-primary tooltips"
@@ -23,15 +25,13 @@
 
         </h1>
 
-        <p class="lead fs-3" id="text-shadow">{{info.titleInfo}}</p>
+        <p class="lead display-5 fw-bold me-4" id="text-shadow">{{info.titleInfo}}</p>
 
       </div>
 
     </div>
   </div>
 </header>
-
-
 
 
 
@@ -80,3 +80,4 @@
     </div>
   </div>
 </div>
+

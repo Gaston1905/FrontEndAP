@@ -2,6 +2,21 @@
   color:#0e77bb;
 }
 
+@media (max-width: 464px) {
+  #img-front {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 464px) {
+  #array-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
 li {
   list-style-type: none;
 }

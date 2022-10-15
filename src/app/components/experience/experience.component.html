@@ -1,6 +1,6 @@
 <div class="pt-5" id="main-container">
   <div class="container py-4 ">
-    <h2 class="fs-1 mx-auto" id="title">EXPERIENCIA</h2>
+    <h2 class="fs-1 mx-auto font-monospace" id="title">EXPERIENCIA</h2>
     <hr>
 
     <div data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
@@ -18,15 +18,16 @@
 
       <ul class="row justify-content-center list-unstyled mt-3">
 
-        <li class="col-12 card mb-3 rounded-3" *ngFor="let experience of experiences">
+        <li class="col-10 card mb-5 rounded-3 font-monospace" *ngFor="let experience of experiences">
 
           <div class="row g-0">
 
 
             <div class="col-md-8">
               <div class="card-body">
-                <h3 class="card-title display-6 text-center">{{experience.titleExp}}</h3>
-                <p class="card-text fs-4">{{experience.descExp}}</p>
+                <h3 class="card-title display-5 text-center fs-4">{{experience.titleExp}}</h3>
+                <hr>
+                <p class="card-text fs-5">{{experience.descExp}}</p>
                 <div class="row justify-content-between">
                   <div class="col-md">
                     <p class="fs-6"><span class="fw-bolder">Período:</span> {{experience.startDateExp}} -

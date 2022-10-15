@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -34,6 +33,7 @@ import { SkillsService } from './services/skills.service';
 import { InfoService } from './services/info.service';
 import { EducationService } from './services/education.service';
 import { AboutMeService } from './services/about-me.service';
+import { PageLoadComponent } from './components/page-load/page-load.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +47,7 @@ import { AboutMeService } from './services/about-me.service';
     AboutMeComponent,
     SkillsComponent,
     ProjectComponent,
+    PageLoadComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +56,6 @@ import { AboutMeService } from './services/about-me.service';
     NgbModule,
     FormsModule,
     FontAwesomeModule,
-    MatCardModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     AppRoutingModule,

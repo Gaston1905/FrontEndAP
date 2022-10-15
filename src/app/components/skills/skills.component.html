@@ -1,7 +1,7 @@
 <div id="main-container">
-  <div class="container py-4" >
-    <h2 class="fs-2 mt-5 pt-3">Hards <span id="color">&</span> Soft</h2>
-      <h2 class="fs-1 fw-bolder" id="color">SKILLS</h2>
+  <div class="container py-4 " >
+    <h2 class="fs-2 mt-5 pt-3 font-monospace">Hards <span id="color">&</span> Soft</h2>
+      <h2 class="fs-1 fw-bolder font-monospace" id="color">SKILLS</h2>
       <hr>
 
     <div class="row" id="principio">
@@ -16,8 +16,8 @@
 
 
       <div class="row">
-        <div class=" text-center col-sm-4 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="50"
-          data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        <div class=" text-center col-sm-4 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="50"
+          data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
           data-aos-anchor-placement="top-center" *ngFor="let skill of skills">
 
 
@@ -39,9 +39,9 @@
 
 
 
-          <circle-progress [percent]="skill.percent" [radius]="100" [showImage]="true" [imageHeight]="70"
-            [imageWidth]="70" [outerStrokeWidth]="12" [innerStrokeWidth]="2" [imageSrc]="skill.picSkill"
-            [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="1000">
+          <circle-progress [percent]="skill.percent" [radius]="80" [showImage]="true" [imageHeight]="50"
+            [imageWidth]="50" [outerStrokeWidth]="12" [innerStrokeWidth]="2" [imageSrc]="skill.picSkill"
+            [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="2000">
           </circle-progress>
           <span style="color:rgb(225,222,222); font-size:0px"> {{ skill.skillName }}
           </span>

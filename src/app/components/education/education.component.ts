@@ -7,11 +7,7 @@ import { NgForm } from '@angular/forms';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { Education } from 'src/app/model/education';
 import { EducationService } from 'src/app/services/education.service';
-import {
-  CdkDragDrop,
-  moveItemInArray,
-  transferArrayItem,
-} from '@angular/cdk/drag-drop';
+
 
 @Component({
   selector: 'app-education',

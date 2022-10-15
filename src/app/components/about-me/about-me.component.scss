@@ -9,23 +9,30 @@ hr {
   margin-bottom: -3rem;
 }
 
+#main-container {
+  box-shadow: -5px 0 30px 4px rgba(0, 0, 0, 0.75);
+}
+
+
 #description {
   padding: 5px;
   margin-bottom: 3.5rem;
   background-color: #0e77bb;
-  box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 7px 30px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 7px 30px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 7px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
 .img-thumbnail {
 
-  box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 7px 30px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 7px 30px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 7px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
 .rectangle {
+  color:rgb(225, 222, 222);
+  backdrop-filter: blur(10px);
   height: 100px;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
@@ -57,4 +64,8 @@ hr {
   #description {
     font-size: 1rem;
   }
+}
+
+hr {
+  width: 45.5%;
 }

@@ -1,14 +1,14 @@
-<div class="rectangle2 bg-gray pb-5 rounded-top"></div>
-<div class=" bg-gray p-5 " id="main-container">
+<div class="rectangle2 pb-5 rounded-top"></div>
+<div class="bg-gray p-5 rounded-top" id="main-container">
 
   <div class="container py-4 contenedor" *ngFor="let aboutme of aboutme">
-    <h2 class="fs-1 mb-3 mt-3">ACERCA DE MI</h2>
+    <h2 class="fs-1 mb-3 mt-3 font-monospace">ACERCA DE MI</h2>
     <hr>
 
-    <div class="row align-items-center py-3 pb-5">
-      <div class="col-sm-4" data-aos="zoom-in" data-aos-offset="3" data-aos-delay="50" data-aos-duration="1000"
-        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center">
+    <div class="row align-items-center py-3 pb-5" data-aos="zoom-in" data-aos-offset="3" data-aos-delay="50" data-aos-duration="1000"
+    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+    data-aos-anchor-placement="top-center">
+      <div class="col-sm-4" >
         <img mat-card-image src="{{aboutme.profileAboutMe}}" class="img-thumbnail w-100 mb-5">
         <a *ngIf="isloged()" (click)="onOpenModal('edit', aboutme)" class="btn text-primary tooltips "
           data-placement="top" data-toggle="tooltip" data-original-title="edit">
@@ -16,10 +16,9 @@
           </fa-icon>
         </a>
       </div>
-      <div class="col-sm-8 mt-3 text-white pb-5" data-aos="zoom-in" data-aos-offset="10" data-aos-delay="50"
-        data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center">
+      <div class="col-sm-8 mt-3 text-white pb-5 font-monospace">
         <h3 class="fs-5">{{aboutme.titleAboutMe}}</h3>
+        <hr>
         <p class="fs-4 rounded-3 lh-1" id="description">{{aboutme.descAboutMe}}</p>
       </div>
     </div>

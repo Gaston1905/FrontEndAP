@@ -1,15 +1,15 @@
 
 <div class="main-container">
   <nav class="navbar rounded-3">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+    <div class="container-fluid" id="array-container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#" >
         <img src="../../../assets/Sin-título-2.png" alt=""
           width="20" height="40" class="d-inline-block align-text-top" id="img-front">
-        <span id="name-front">Gaston Gaitan</span>
+        <span id="name-front">GASTON GAITAN</span>
       </a>
 
-      <ul class="navbar-nav ml-auto d-flex flex-row bd-highlight align-items-center">
-        <li class=" nav-item active ms-1 me-1">
+      <ul class=" navbar-nav d-flex flex-row bd-highlight align-items-center" id="btn-social-media">
+        <li class=" nav-item active ms-3 me-1">
           <a class="nav-link" id="link-animado" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
               src="../../../assets/linkedin.png"></a>
         </li>
@@ -29,7 +29,7 @@
 
 
         <!-----------------LOGIN------------------------>
-        <li *ngIf="!isloged()" class="nav-item">
+ <!---      <li *ngIf="!isloged()" class="nav-item" id="btn-login">
           <a data-bs-toggle="modal" data-bs-target="#myModal" class="nav-link active"
             class="btn tooltips btn-primary btn-sm" data-placement="top" data-toggle="tooltip"
             data-original-title="Edit">
@@ -43,7 +43,7 @@
             <fa-icon [icon]="faLockOpen">
             </fa-icon>
           </a>
-        </li>-->
+        </li>->
         <!------------------------------------------------>
       </ul>
     </div>

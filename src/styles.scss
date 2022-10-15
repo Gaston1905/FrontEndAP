@@ -2,6 +2,8 @@
 
 html,
 body {
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -12,6 +14,24 @@ body {
   font-family: "Rock Salt", cursive;
   font-family: "Satisfy", cursive;
 }
+
+#video_background {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  z-index: -100;
+
+  background-size: cover;
+
+  filter: opacity(0.24);
+  }
 
 
 

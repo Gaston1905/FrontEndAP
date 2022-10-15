@@ -1,7 +1,7 @@
 <div id="main-container">
   <div class="container py-4" >
     <div class="row">
-      <h2 class="fs-2 pt-1" id="underline">PROYECTOS</h2>
+      <h2 class="fs-1 pt-1 font-monospace fw-bold" >PROYECTOS</h2>
       <hr>
 
     <div>
@@ -12,12 +12,12 @@
     </div>
 
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-aos="fade-up" data-aos-offset="15" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 font-monospace" data-aos="fade-up" data-aos-offset="15" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" >
       <div class="col" *ngFor="let project of projects" >
-        <div class="card" id="shadow">
+        <div class="card" id="card-transform" >
           <img src="{{project.picPro}}" class="card-img-top" alt="Foto de Proyecto">
         <div class="card-body">
-          <h3 class="card-title">{{project.titlePro}}</h3>
+          <h3 class="card-title" id="color">{{project.titlePro}}</h3>
           <p class="card-text">{{project.descPro}}</p>
             <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
@@ -42,7 +42,6 @@
         </div>
       </div>
     </div>
-
 
 
 
@@ -199,5 +198,9 @@
     </div>
   </div>
 </div>
+</div>
 
-<div class="rectangle bg-gray mb-5 rounded"></div>
+
+<div class="rectangle mb-5 rounded" id="rectangle"></div>
+
+
