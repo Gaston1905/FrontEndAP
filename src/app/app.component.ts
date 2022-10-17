@@ -1,4 +1,7 @@
+
+
 import { Component } from '@angular/core';
+import { AboutMeService } from './services/about-me.service';
 
 
 @Component({
@@ -8,7 +11,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: any;
-  wpopup: boolean = false;
-  constructor() {}
+
+
+constructor(private aboutMeSVC: AboutMeService) {
+
+}
+
+  getAbout() {
+    this.aboutMeSVC.getAboutMe();
+  }
+
 }
 

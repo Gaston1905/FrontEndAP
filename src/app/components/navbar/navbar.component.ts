@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { faUserLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -11,15 +12,20 @@ import { faUserLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  form: FormGroup;
+  form: UntypedFormGroup;
   name: string | undefined;
   faUserLock = faUserLock;
   faLockOpen = faLockOpen;
+
+
   constructor(
     public autenticacionService: AutenticacionService,
-    private formBuilder: FormBuilder,
-    private ruta: Router
+    private formBuilder: UntypedFormBuilder,
+    private ruta: Router,
+
   ) {
+
+
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(5)]],
@@ -51,4 +57,8 @@ export class NavbarComponent implements OnInit {
   handleClear() {
     this.name = '';
   }
+
+
+
+
 }

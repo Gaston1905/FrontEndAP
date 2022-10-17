@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  AboutMeService: any;
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }
+
+
 
 }

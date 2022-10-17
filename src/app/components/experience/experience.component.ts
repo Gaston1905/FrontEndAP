@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
@@ -25,7 +24,6 @@ export class ExperienceComponent implements OnInit {
 
   constructor(
     private experienceService: ExperienceService,
-    private modalService: NgbModal,
     private autenticacionService: AutenticacionService
   ) {}
 
