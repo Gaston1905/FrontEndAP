@@ -14,5 +14,15 @@
   color: #0e77bb;
 }
 
+@media (max-width: 767px) {
+  #principio {
+    width: auto;
+  }
+}
+
+#circle {
+  filter: drop-shadow(0 5px 8px rgba(1, 1, 85, 0.603));
+}
+
 
 

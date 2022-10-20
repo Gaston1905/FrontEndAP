@@ -15,10 +15,10 @@
 
 
 
-      <div class="row">
+      <div class="row"  >
         <div class=" text-center col-sm-4 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="50"
           data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-          data-aos-anchor-placement="top-center" *ngFor="let skill of skills">
+          data-aos-anchor-placement="top-center" *ngFor="let skill of skills" >
 
 
 
@@ -39,9 +39,9 @@
 
 
 
-          <circle-progress [percent]="skill.percent" [radius]="80" [showImage]="true" [imageHeight]="50"
+          <circle-progress id="circle" [percent]="skill.percent" [radius]="70" [showImage]="true" [imageHeight]="50"
             [imageWidth]="50" [outerStrokeWidth]="12" [innerStrokeWidth]="2" [imageSrc]="skill.picSkill"
-            [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="2000">
+            [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="2000" [lazy]="true">
           </circle-progress>
           <span style="color:rgb(225,222,222); font-size:0px"> {{ skill.skillName }}
           </span>

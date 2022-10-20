@@ -1,7 +1,7 @@
 <div id="main-container">
   <div class="container py-4" >
     <div class="row">
-      <h2 class="fs-1 pt-1 font-monospace fw-bold" >PROYECTOS</h2>
+      <h2 class="fs-1 pt-1 font-monospace fw-bold">PROYECTOS</h2>
       <hr>
 
     <div>
@@ -12,8 +12,8 @@
     </div>
 
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 font-monospace" data-aos="fade-up" data-aos-offset="15" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" >
-      <div class="col" *ngFor="let project of projects" >
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gap-0 font-monospace" data-aos="fade-up" data-aos-offset="15" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" >
+      <div class="col pt-5 ps-4" *ngFor="let project of projects" >
         <div class="card" id="card-transform" >
           <img src="{{project.picPro}}" class="card-img-top" alt="Foto de Proyecto">
         <div class="card-body">
@@ -24,6 +24,8 @@
               <button type="button" class="btn btn-sm btn-outline-secondary"><a class="nav-link active" href="{{project.linkPro}}"><img src="../../../assets/github.png" id="link-animado"></a></button>
             </div>
           </div>
+
+
 
 
               <a *ngIf="isloged()" (click)="onOpenModal('edit', project)" class="btn text-primary tooltips "
@@ -42,10 +44,6 @@
         </div>
       </div>
     </div>
-
-
-
-
 
 
   <!-------------MODAL AÑADIR------------>
