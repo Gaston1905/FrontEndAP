@@ -23,7 +23,7 @@
 
         <li class="col-10 card mb-5 rounded-3 font-monospace" *ngFor="let education of educations" >
 
-          <div class="row g-0" >
+          <div class="row g-0">
             <div class="col-md-4 d-flex flex-column justify-content-center" >
               <div class="edu-img ps-5"><img src="{{ education.picEdu }}" alt="Foto de Instituciones Educativas"
                   class="img-fluid w-75 ps-4"></div>
@@ -31,15 +31,12 @@
 
             <div class="col-md-8">
               <div class="card-body">
-                <h3 class="card-title display-5 text-center fs-4">{{education.nameEdu}}</h3>
+                <h3 class="card-title display-5 text-center fs-5">{{education.nameEdu}}</h3>
                 <hr>
                 <p class="card-text fs-5">{{education.titleEdu}}</p>
-                <div class="row justify-content-between">
-                  <div class="col-md">
-                    <p class="fs-6"><span class="fw-bolder">Período:</span> {{education.startDateEdu}} -
-                      {{education.endDateEdu}}</p>
-                  </div>
-                </div>
+                <p class="fs-6"><span class="fw-bolder">Período:</span> {{education.startDateEdu}} -
+                  {{education.endDateEdu}}</p>
+
               </div>
             </div>
 
