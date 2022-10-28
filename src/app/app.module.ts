@@ -39,6 +39,7 @@ import { LoadingPageService } from './services/loading-page.service';
 
 
 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -63,7 +64,6 @@ import { LoadingPageService } from './services/loading-page.service';
         HttpClientModule,
         AppRoutingModule,
         ReactiveFormsModule,
-
     ],
     providers: [
       { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true},
