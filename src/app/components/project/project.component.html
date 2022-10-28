@@ -12,67 +12,29 @@
         </div>
       </div>
 
+      <div id="carouselExampleIndicators" class="carousel slide pt-3" data-bs-ride="carousel" data-bs-interval="5500" pause="hover" touch="true">
+        <div class="carousel-inner">
 
-      <div class="carousel-container">
-        <div *ngFor="let project of projects; let i = index">
-
-          <img alt=""
-          src="{{project.picPro}}"
-          [ngClass]="{'image-active': selectedIndex === i}"
-          class="fade"
-          >
-
-          <div *ngIf="indicators" class="carousel-dot-container">
-            <span *ngFor="let dot of projects; let i = index"
-            class="dot"
-            [ngClass]="{'active' : selectedIndex === i }"
-            (click)="selectImage(i)"
-            >
-          </span>
+          <!-- ngfor loop using get dynamic value and ngclass for add acive class -->
+          <div class="carousel-item rounded rounded-2" *ngFor="let project of projects; let i = index" [ngClass]="{'active': i === 0}">
+           <img src={{project.picPro}} class="rounded mx-auto d-block" title=""/>
+           <br>
+           <h3 class="card-title text-center pt-3" id="description" >{{project.titlePro}}</h3>
+           <p class="card-text text-center" id="description">{{project.descPro}}</p>
+           <span class="d-flex flex-row justify-content-center gap-2 pb-5">
+           <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-link"><a class="nav-link" href="{{project.linkPro}}"><img src="../../../assets/github.png" id="link-animado" width="30"></a></button>
+           </span>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon btn btn-outline-light" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon btn btn-outline-light" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-
-        <button *ngIf="controls" class="btn-carousel btn-prev"
-        (click)="onPrevClick()"
-        >
-        <i class="fas fa-arrow-circle-left icon-carousel icon-prev"></i>
-      </button>
-      <button *ngIf="controls" class="btn-carousel btn-next"
-      (click)="onNextClick()"
-      >
-      <i class="fas fa-arrow-circle-right icon-carousel icon-next"></i>
-    </button>
-
-    <a *ngIf="isloged()"
-    (click)="onOpenModal('edit', project)"
-    class="btn text-primary tooltips "
-    data-placement="top"
-    data-toggle="tooltip"
-    data-original-title="edit">
-    <fa-icon [icon]="faPenToSquare"></fa-icon>
-  </a>
-  <a *ngIf="isloged()"
-  (click)="onOpenModal('delete', project)"
-          class="btn text-danger  tooltips"
-          data-placement="top"
-          data-toggle="tooltip"
-          data-original-title="delete">
-          <fa-icon [icon]="faXmarkCircle"></fa-icon>
-        </a>
       </div>
-    </div>
-
-    <div class="carousel-container mt-3 p-2 font-monospace">
-      <div *ngFor="let project of projects; let i = index">
-        <h3 class="card-title fade" id="description" [ngClass]="{'image-active' : selectedIndex === i }">{{project.titlePro}}</h3>
-        <p class="card-text fade" id="description" [ngClass]="{'image-active' : selectedIndex === i }">{{project.descPro}}</p>
-        <span class="d-flex flex-row justify-content-center gap-2">
-        <button type="button" class="btn btn-sm btn-outline-secondary fade" id="btn-link"  [ngClass]="{'image-active' : selectedIndex === i }"><a class="nav-link" href="{{project.linkPro}}"><img src="../../../assets/github.png" id="link-animado" width="30" class="ms-2">GITHUB</a></button>
-      </span>
-      </div>
-    </div>
-
-
-
 
     <!-------------MODAL AÑADIR------------>
 

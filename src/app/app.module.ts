@@ -1,3 +1,4 @@
+import { HttpErrorInterceptor } from './services/http-error-interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,8 +34,9 @@ import { SkillsService } from './services/skills.service';
 import { InfoService } from './services/info.service';
 import { EducationService } from './services/education.service';
 import { AboutMeService } from './services/about-me.service';
-import { PageLoadComponent } from './components/page-load/page-load.component';
 import { LoadingPageComponent } from './components/loading-page/loading-page.component';
+import { LoadingPageService } from './services/loading-page.service';
+
 
 
 @NgModule({
@@ -49,7 +51,6 @@ import { LoadingPageComponent } from './components/loading-page/loading-page.com
         AboutMeComponent,
         SkillsComponent,
         ProjectComponent,
-        PageLoadComponent,
         LoadingPageComponent,
     ],
     imports: [
@@ -62,8 +63,10 @@ import { LoadingPageComponent } from './components/loading-page/loading-page.com
         HttpClientModule,
         AppRoutingModule,
         ReactiveFormsModule,
+
     ],
     providers: [
+      { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true},
         AboutMeService,
         EducationService,
         InfoService,
@@ -71,7 +74,9 @@ import { LoadingPageComponent } from './components/loading-page/loading-page.com
         SkillsService,
         ProjectService,
         AutenticacionService,
-        { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+        LoadingPageService,
+        { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+
     ],
     bootstrap: [AppComponent]
 })

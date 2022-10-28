@@ -3,6 +3,7 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { faUserLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
+import { BuiltinTypeName } from '@angular/compiler';
 
 
 
@@ -16,6 +17,7 @@ export class NavbarComponent implements OnInit {
   name: string | undefined;
   faUserLock = faUserLock;
   faLockOpen = faLockOpen;
+
 
 
   constructor(
@@ -33,7 +35,8 @@ export class NavbarComponent implements OnInit {
   }
   isloged = () => this.autenticacionService.loggedIn();
 
-  ngOnInit(): void {}
+  ngOnInit(
+  ): void {}
 
   get Email() {
     return this.form.get('email');
@@ -57,7 +60,6 @@ export class NavbarComponent implements OnInit {
   handleClear() {
     this.name = '';
   }
-
 
 
 

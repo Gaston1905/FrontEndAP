@@ -15,20 +15,11 @@ import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
 export class ProjectComponent implements OnInit {
 
 
-
+  public projects: Project[] = [];
   public editProject: Project | undefined;
   public deleteProject: Project | undefined;
   faPenToSquare = faPenToSquare;
   faXmarkCircle = faXmarkCircle;
-
-
-  @Input() projects: Project[] = [];
-  @Input() indicators = true;
-  @Input() controls = true;
-  @Input() autoSlide = false;
-  @Input() slideInterval = 4000;
-
-  selectedIndex = 0;
 
   constructor(
     private projectService: ProjectService,
@@ -39,10 +30,6 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProject();
-
-    if(this.autoSlide) {
-      this.autoSlideImages();
-    }
   }
 
   public getProject(): void {
@@ -115,29 +102,5 @@ export class ProjectComponent implements OnInit {
     });
   }
 
-  selectImage(index: number): void {
-    this.selectedIndex = index;
-  }
 
-  onPrevClick(): void {
-    if(this.selectedIndex === 0) {
-      this.selectedIndex = this.projects.length - 1;
-    } else {
-      this.selectedIndex--;
-    }
-  }
-
-  onNextClick(): void {
-    if(this.selectedIndex === this.projects.length - 1) {
-      this.selectedIndex = 0;
-    } else {
-      this.selectedIndex++;
-    }
-  }
-
-  autoSlideImages(): void {
-    setInterval(() => {
-      this.onNextClick();
-    }, this.slideInterval);
-  }
 }

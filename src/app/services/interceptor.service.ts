@@ -3,7 +3,7 @@ import {
   HttpEvent,
   HttpHandler,
   HttpInterceptor,
-  HttpRequest,
+  HttpRequest
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AutenticacionService } from './autenticacion.service';
@@ -12,7 +12,9 @@ import { AutenticacionService } from './autenticacion.service';
   providedIn: 'root',
 })
 export class InterceptorService implements HttpInterceptor {
-  constructor(private autenticacionService: AutenticacionService) {}
+  constructor(
+    private autenticacionService: AutenticacionService
+    ) {}
 
   intercept(
     req: HttpRequest<any>,
@@ -28,4 +30,6 @@ export class InterceptorService implements HttpInterceptor {
     }
     return next.handle(req);
   }
+
+
 }

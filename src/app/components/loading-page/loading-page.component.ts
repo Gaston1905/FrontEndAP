@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { LoadingPageService } from './../../services/loading-page.service';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 ;
 
 
@@ -9,12 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadingPageComponent implements OnInit {
 
+  showLoading = false;
 
-
-  constructor() {
-  }
+  constructor(
+    private loadingSVC: LoadingPageService,
+    private cdRef: ChangeDetectorRef
+    ) {}
 
   ngOnInit(): void {
+    this.init();
+  }
+
+  init() {
+    this.loadingSVC.getLoadingObserver().subscribe((status) => {
+      this.showLoading = status === 'start';
+      this.cdRef.detectChanges();
+    });
   }
 
 }

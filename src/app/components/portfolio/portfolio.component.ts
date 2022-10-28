@@ -12,29 +12,8 @@ import { ProjectService } from 'src/app/services/project.service';
 export class PortfolioComponent implements OnInit {
   AboutMeService: any;
 
-  @Input() projects: Project[] = [];
-
-
-
-
-
   constructor( private projectService: ProjectService) { }
 
-  ngOnInit(): void {
-    this.getProject();
-  }
-
-  public getProject(): void {
-    this.projectService.getProject().subscribe({
-      next: (response: Project[]) => {
-        this.projects = response;
-      },
-      error: (error: HttpErrorResponse) => {
-        console.log('error');
-      },
-    });
-  }
-
-
+  ngOnInit(): void { }
 
 }

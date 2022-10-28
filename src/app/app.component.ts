@@ -1,7 +1,7 @@
 
 
 import { Component } from '@angular/core';
-import { AboutMeService } from './services/about-me.service';
+
 
 
 @Component({
@@ -13,13 +13,10 @@ export class AppComponent {
   title: any;
 
 
-constructor(private aboutMeSVC: AboutMeService) {
+constructor() {}
 
-}
 
-  getAbout() {
-    this.aboutMeSVC.getAboutMe();
-  }
+
 
 }
 
