@@ -6,6 +6,7 @@ import { Project } from 'src/app/model/project';
 import { NgForm } from '@angular/forms';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
+import { projects } from 'src/app/mock/projects.mock';
 
 @Component({
   selector: 'app-project',
@@ -15,7 +16,7 @@ import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
 export class ProjectComponent implements OnInit {
 
 
-  public projects: Project[] = [];
+  public projects = projects;
   public editProject: Project | undefined;
   public deleteProject: Project | undefined;
   faPenToSquare = faPenToSquare;

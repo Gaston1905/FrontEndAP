@@ -1,4 +1,3 @@
-<div class="main-container">
   <nav class="navbar rounded-3">
     <div class="container-fluid" id="array-container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#" >
@@ -28,10 +27,15 @@
         <button type="button" class="btn btn-info btn-sm ms-4" onclick="document.documentElement.classList.toggle('dark-mode')" id="btn-style"><img src="assets/sun.png" alt="" width="25" id="img-sun"><img src="assets/moon.png" alt="" width="25" id="img-moon"></button>
 
         <!-----------------LOGIN------------------------>
-  <li *ngIf="!isloged()" class="nav-item" id="btn-login">
-          <a data-bs-toggle="modal" data-bs-target="#myModal" class="nav-link active"
-            class="btn tooltips btn-primary btn-sm" data-placement="top" data-toggle="tooltip"
-            data-original-title="Edit" >
+        <!-- <li *ngIf="!isloged()" class="nav-item" id="btn-login">
+          <a data-bs-toggle="modal"
+             data-bs-target="#myModal"
+             class="nav-link active"
+             class="btn tooltips btn-primary btn-sm"
+             data-placement="top"
+             data-toggle="tooltip"
+             data-original-title="Edit"
+          >
             <fa-icon [icon]="faUserLock">
             </fa-icon>
           </a>
@@ -42,15 +46,12 @@
             <fa-icon [icon]="faLockOpen">
             </fa-icon>
           </a>
-        </li> -->
-        <!------------------------------------------------>
+        </li>
       </ul>
-
     </div>
+  </nav> -->
 
-  </nav>
 
-</div>
 
 <!------------------------- Login modal-------------------->
 <div class="modal fade bd-example-modal-lg" id="myModal">
@@ -98,4 +99,4 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>

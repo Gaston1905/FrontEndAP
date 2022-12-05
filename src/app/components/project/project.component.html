@@ -16,8 +16,8 @@
         <div class="carousel-inner">
 
           <!-- ngfor loop using get dynamic value and ngclass for add acive class -->
-          <div class="carousel-item rounded rounded-2" *ngFor="let project of projects; let i = index" [ngClass]="{'active': i === 0}">
-           <img src={{project.picPro}} class="rounded mx-auto d-block" title=""/>
+          <div class="carousel-item" *ngFor="let project of projects; let i = index" [ngClass]="{'active': i === 0}">
+           <img src={{project.picPro}} class="rounded rounded-3 mx-auto d-block w-75" title=""/>
            <br>
            <h3 class="card-title text-center pt-3" id="description" >{{project.titlePro}}</h3>
            <p class="card-text text-center" id="description">{{project.descPro}}</p>

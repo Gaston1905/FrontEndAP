@@ -6,6 +6,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { InfoService } from 'src/app/services/info.service';
 import { Info } from 'src/app/model/info';
+import { info } from 'src/app/mock/info.mock';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ import { Info } from 'src/app/model/info';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  public info: Info | undefined;
+  public info = info;
   public editInfo: Info | undefined;
 
   subscription?: Subscription;

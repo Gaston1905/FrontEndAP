@@ -2,7 +2,7 @@
 
 <div class="bg-gray p-5 rounded-top" id="main-container">
 
-  <div class="container py-4 contenedor" *ngFor="let aboutme of aboutme">
+  <div class="container py-4 contenedor">
     <h2 class="fs-1 mb-3 mt-3 font-monospace">ACERCA DE MI</h2>
     <hr>
 
@@ -10,7 +10,7 @@
     data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
     data-aos-anchor-placement="top-center" >
       <div class="col-sm-4">
-        <img mat-card-image src="{{aboutme.profileAboutMe}}" class="img-thumbnail w-100 mb-5">
+        <img mat-card-image src="{{aboutme.pictureAboutMe}}" class="img-thumbnail w-100 mb-5">
         <a *ngIf="isloged()" (click)="onOpenModal('edit', aboutme)" class="btn text-primary tooltips "
           data-placement="top" data-toggle="tooltip" data-original-title="edit">
           <fa-icon [icon]="faPenToSquare">
@@ -57,7 +57,7 @@
 
           <div class="form-group">
             <label for="profileAboutMe">Foto de Perfil</label>
-            <input type="text" ngModel="{{ editAboutMe?.profileAboutMe }}" name="profileAboutMe" class="form-control"
+            <input type="text" ngModel="{{ editAboutMe?.pictureAboutMe }}" name="profileAboutMe" class="form-control"
               id="profileAboutMe" placeholder="Foto de Perfil" />
           </div>
 
@@ -74,7 +74,7 @@
             <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">
               Cerrar
             </button>
-            <button (click)="onUpdateAboutMe(editForm.value)" data-dismiss="modal" class="btn btn-primary">
+            <button data-dismiss="modal" class="btn btn-primary">
               Salvar Cambios
             </button>
           </div>

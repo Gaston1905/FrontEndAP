@@ -1,6 +1,6 @@
 export interface AboutMe {
   idAboutMe: number;
-  profileAboutMe: String;
+  pictureAboutMe: String;
   titleAboutMe: String;
   descAboutMe: String;
 }

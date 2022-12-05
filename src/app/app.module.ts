@@ -1,3 +1,4 @@
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpErrorInterceptor } from './services/http-error-interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,7 +23,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { InterceptorService } from './services/interceptor.service';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { EducationComponent } from './components/education/education.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -43,12 +43,12 @@ import { LoadingPageService } from './services/loading-page.service';
 @NgModule({
     declarations: [
         AppComponent,
+        NavbarComponent,
         HeaderComponent,
         ExperienceComponent,
         EducationComponent,
         FooterComponent,
         PortfolioComponent,
-        NavbarComponent,
         AboutMeComponent,
         SkillsComponent,
         ProjectComponent,

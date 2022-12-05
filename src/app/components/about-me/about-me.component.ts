@@ -5,6 +5,7 @@ import { AboutMeService } from 'src/app/services/about-me.service';
 import { Subscription } from 'rxjs';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { about } from 'src/app/mock/about.mock';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./about-me.component.scss'],
 })
 export class AboutMeComponent implements OnInit {
-  public aboutme: AboutMe[] = [];
+  public aboutme = about;
   public aboutme2 = this.aboutMeService.getAboutMe();
   public editAboutMe: AboutMe | undefined;
   faPenToSquare = faPenToSquare;
@@ -28,19 +29,19 @@ export class AboutMeComponent implements OnInit {
   isloged = () => this.autenticacionService.loggedIn();
 
   ngOnInit(): void {
-    this.getAboutMe();
+    // this.getAboutMe();
   }
 
-  public getAboutMe(): void {
-    this.aboutMeService.getAboutMe().subscribe({
-      next: (response: AboutMe[]) => {
-        this.aboutme = response;
-      },
-      error: (error: HttpErrorResponse) => {
-        console.log('error');
-      },
-    });
-  }
+  // public getAboutMe(): void {
+  //   this.aboutMeService.getAboutMe().subscribe({
+  //     next: (response: AboutMe[]) => {
+  //       this.aboutme = response;
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       console.log('error');
+  //     },
+  //   });
+  // }
 
   public onOpenModal(mode: string, aboutme?: AboutMe): void {
     const container = document.getElementById('main-container');
@@ -55,18 +56,18 @@ export class AboutMeComponent implements OnInit {
     button.click();
   }
 
-  public onUpdateAboutMe(aboutme: AboutMe): void {
-    this.editAboutMe = aboutme;
-    document.getElementById('add-aboutme-form')?.click();
-    this.aboutMeService.updateAboutMe(aboutme).subscribe({
-      next: (response: AboutMe) => {
-        console.log(response);
-        this.getAboutMe();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
+  // public onUpdateAboutMe(aboutme: AboutMe): void {
+  //   this.editAboutMe = aboutme;
+  //   document.getElementById('add-aboutme-form')?.click();
+  //   this.aboutMeService.updateAboutMe(aboutme).subscribe({
+  //     next: (response: AboutMe) => {
+  //       console.log(response);
+  //       this.getAboutMe();
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     },
+  //   });
+  // }
 
 }
