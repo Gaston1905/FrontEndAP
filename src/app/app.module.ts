@@ -34,7 +34,6 @@ import { SkillsService } from './services/skills.service';
 import { InfoService } from './services/info.service';
 import { EducationService } from './services/education.service';
 import { AboutMeService } from './services/about-me.service';
-import { LoadingPageComponent } from './components/loading-page/loading-page.component';
 import { LoadingPageService } from './services/loading-page.service';
 
 
@@ -52,7 +51,6 @@ import { LoadingPageService } from './services/loading-page.service';
         AboutMeComponent,
         SkillsComponent,
         ProjectComponent,
-        LoadingPageComponent,
     ],
     imports: [
         BrowserModule,

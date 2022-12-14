@@ -9,11 +9,11 @@
     <div class="row" id="principio">
 
 
-      <div *ngIf="isloged()" class="text-center">
+      <!-- <div *ngIf="isloged()" class="text-center">
         <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
           <a class="nav-link" style="color: #fff">Agregar Skill <span class="sr-only">(current)</span></a>
         </button>
-      </div>
+      </div> -->
 
 
 
@@ -26,19 +26,19 @@
 
 
 
-          <a *ngIf="isloged()" (click)="onOpenModal('edit', skill)" class="btn text-primary tooltips "
+          <!-- <a *ngIf="isloged()" (click)="onOpenModal('edit', skill)" class="btn text-primary tooltips "
             data-placement="top" data-toggle="tooltip" data-original-title="edit">
             <fa-icon [icon]="faPenToSquare">
             </fa-icon>
-          </a>
+          </a> -->
 
-          <a *ngIf="isloged()" (click)="onOpenModal('delete', skill)" class="btn text-danger  tooltips"
+          <!-- <a *ngIf="isloged()" (click)="onOpenModal('delete', skill)" class="btn text-danger  tooltips"
             data-placement="top" data-toggle="tooltip" data-original-title="delete">
             <fa-icon [icon]="faXmarkCircle">
             </fa-icon>
-          </a>
+          </a> -->
 
-
+          <!-- <img src="{{skill.picSkill}}" class="mt-3 pt-4" width="75" alt="icon-skills" id="icon-skill"> -->
 
 
           <circle-progress id="circle" [percent]="skill.percent" [radius]="70" [showImage]="true" [imageHeight]="50"
@@ -53,7 +53,7 @@
 
 
     <!-- Add Skill Modal -->
-    <div class="modal fade" id="addSkillModal" tabindex="-1" role="dialog" aria-labelledby="addSkillModalLabel"
+    <!-- <div class="modal fade" id="addSkillModal" tabindex="-1" role="dialog" aria-labelledby="addSkillModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -90,10 +90,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Edit skill modal -->
-    <div class="modal fade" id="editSkillModal" tabindex="-1" role="dialog" aria-labelledby="skillEditModalLabel"
+    <!-- <div class="modal fade" id="editSkillModal" tabindex="-1" role="dialog" aria-labelledby="skillEditModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -135,10 +135,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Delete skill modal -->
-    <div class="modal fade" id="deleteSkillModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel"
+    <!-- <div class="modal fade" id="deleteSkillModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -161,7 +161,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Notification for no skills -->
     <div *ngIf="skills?.length == 0" class="col-lg-12 col-md-12 col-xl-12">

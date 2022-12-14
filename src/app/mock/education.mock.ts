@@ -7,7 +7,7 @@ export const education: Education[] = [
     "endDateEdu": "Actualmente",
     "nameEdu": "UADER | FHAyCS",
     "titleEdu": "Licenciatura en Psicología",
-    "picEdu": "../../assets/descarga (1).png",
+    "picEdu": "../../assets/fhaycs.webp",
   },
 
   {
@@ -16,7 +16,7 @@ export const education: Education[] = [
     "endDateEdu": "Actualmente",
     "nameEdu": "Centro Universitario de Idiomas (UBA - Agronomía)",
     "titleEdu": "Pearson english interactive 1 2.0 - certified A2",
-    "picEdu": "../../assets/cui.png",
+    "picEdu": "../../assets/cui.webp",
   },
   {
     "idEdu": 3,
@@ -24,7 +24,7 @@ export const education: Education[] = [
     "endDateEdu": 2022,
     "nameEdu": "Coursera + Comunidad IT",
     "titleEdu": "	Diseño de Experiencia del Usuario (UX) de Google Diseño UX/UI (certificado Google)",
-    "picEdu": "../../assets/coursera.png",
+    "picEdu": "../../assets/coursera.webp",
   },
   {
     "idEdu": 4,
@@ -32,6 +32,6 @@ export const education: Education[] = [
     "endDateEdu": 2022,
     "nameEdu": "Argentina Programa: #Yo programo",
     "titleEdu": "Desarrollador Web Full Stack",
-    "picEdu": "../../assets/min_desarrollo_productivo.png",
+    "picEdu": "../../assets/min-desarrollo-productivo.webp",
   }
 ]

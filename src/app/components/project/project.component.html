@@ -7,7 +7,7 @@
 
       <div>
         <div *ngIf="isloged()" class="text-center">
-          <button type="button" class="btn btn-success btn-sm" (click)="onOpenModal('add')"><a class="nav-link" style="color: aliceblue">Añadir Projecto<span class="sr-only"> (current)</span></a>
+          <button type="button" class="btn btn-success btn-sm"><a class="nav-link" style="color: aliceblue">Añadir Projecto<span class="sr-only"> (current)</span></a>
           </button>
         </div>
       </div>
@@ -17,12 +17,12 @@
 
           <!-- ngfor loop using get dynamic value and ngclass for add acive class -->
           <div class="carousel-item" *ngFor="let project of projects; let i = index" [ngClass]="{'active': i === 0}">
-           <img src={{project.picPro}} class="rounded rounded-3 mx-auto d-block w-75" title=""/>
+           <img src={{project.picPro}} class="rounded rounded-3 mx-auto d-block w-75" alt="images-projects" title=""/>
            <br>
            <h3 class="card-title text-center pt-3" id="description" >{{project.titlePro}}</h3>
            <p class="card-text text-center" id="description">{{project.descPro}}</p>
            <span class="d-flex flex-row justify-content-center gap-2 pb-5">
-           <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-link"><a class="nav-link" href="{{project.linkPro}}"><img src="../../../assets/github.png" id="link-animado" width="30"></a></button>
+           <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-link"><a target="_blank" class="nav-link" href="{{project.linkPro}}"><img src="../../../assets/github.webp" id="link-animado" alt="icon-github" width="28"></a></button>
            </span>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -36,9 +36,11 @@
         </div>
       </div>
 
+
+
     <!-------------MODAL AÑADIR------------>
 
-  <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="addProjectModalLabel"
+  <!-- <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="addProjectModalLabel"
     aria-hidden="true">
 
     | <div class="modal-dialog" role="document">
@@ -89,13 +91,13 @@
       </div>
     </div>
   </div>
-
+ -->
 
 
 
   <!-------------MODAL EDITAR------------>
 
-  <div class="modal fade" id="editProjectModal" tabindex="-1" role="dialog" aria-labelledby="projectEditModalLabel"
+  <!-- <div class="modal fade" id="editProjectModal" tabindex="-1" role="dialog" aria-labelledby="projectEditModalLabel"
     aria-hidden="true">
 
     <div class="modal-dialog" role="document">
@@ -152,12 +154,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <!-------------MODAL ELIMINAR------------>
 
-  <div data-bs-toggle="modal" data-bs-target="#deleteModelLabel" class="modal fade" id="deleteProjectModal" tabindex="-1"
+  <!-- <div data-bs-toggle="modal" data-bs-target="#deleteModelLabel" class="modal fade" id="deleteProjectModal" tabindex="-1"
     role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
 
     <div class="modal-dialog" role="document">
@@ -193,4 +195,4 @@
 
 
 
-
+ -->
