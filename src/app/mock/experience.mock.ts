@@ -1,9 +1,9 @@
 import { Experience } from './../model/experience';
 
-export const experience: Experience[] = [
+export const experiences: Experience[] = [
   {
     "idExp": 1,
-    "titleExp": "Skill Up Angular - Soft Skills - Metodología SCRUM | Alkemy",
+    "titleExp": "Skill Up Angular | Alkemy",
     "startDateExp": "2022",
     "endDateExp": "2022",
     "descExp": 'Wallet - "Alkybanks"',

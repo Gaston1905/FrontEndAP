@@ -1,13 +1,7 @@
-<div id="main-container">
-  <div class="container py-4 ">
-    <h2 class="fs-1 font-monospace" id="title">EDUCACION</h2>
-    <hr>
 
-    <div class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
-      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
-      id="style-null">
 
-      <div>
+
+      <!-- <div>
         <div class="text-center">
           <button *ngIf="isloged()" type="button" class="btn btn-success btn-sm" (click)="onOpenModal('add')"><a
               class="nav-link" style="color: aliceblue">Añadir
@@ -15,32 +9,12 @@
             </a>
           </button>
         </div>
-      </div>
+      </div> -->
 
 
 
-      <ul class="row justify-content-center list-unstyled mt-3">
 
-        <li class="col-10 card mb-5 rounded-3 font-monospace" *ngFor="let education of educations" >
-
-          <div class="row g-0">
-            <div class="col-md-4 d-flex flex-column justify-content-center" >
-              <div class="edu-img ps-5"><img src="{{ education.picEdu }}" alt="Foto de Instituciones Educativas"
-                  class="img-fluid w-75 ps-4"></div>
-            </div>
-
-            <div class="col-md-8">
-              <div class="card-body">
-                <h3 class="card-title display-5 text-center fs-5">{{education.nameEdu}}</h3>
-                <hr>
-                <p class="card-text fs-5">{{education.titleEdu}}</p>
-                <p class="fs-6"><span class="fw-bolder">Período:</span> {{education.startDateEdu}} -
-                  {{education.endDateEdu}}</p>
-
-              </div>
-            </div>
-
-            <a *ngIf="isloged()" (click)="onOpenModal('edit', education)" class="btn text-primary tooltips "
+            <!-- <a *ngIf="isloged()" (click)="onOpenModal('edit', education)" class="btn text-primary tooltips "
               data-placement="top" data-toggle="tooltip" data-original-title="edit">
               <fa-icon [icon]="faPenToSquare">
               </fa-icon>
@@ -50,13 +24,68 @@
               data-placement="top" data-toggle="tooltip" data-original-title="delete">
               <fa-icon [icon]="faXmarkCircle">
               </fa-icon>
-            </a>
-          </div>
-        </li>
-      </ul>
+            </a> -->
+
+
+<div class="container flex d-flex">
+
+  <div class="container mt-5 mb-5 data-aos" data-aos="fade-right" data-aos-offset="25" data-aos-delay="50" data-aos-duration="2000"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+  id="style-null">
+    <div class="row">
+      <div class="col-md-6 offset-md-2 bg-light rounded px-5 py-2 card ">
+        <div class="card-header bg-light">
+        <h4 id="title">Experiencia</h4>
+      </div>
+        <div class="card-body">
+        <ul class="timeline" *ngFor="let experience of experience" id="timeline">
+          <li>
+            <a target="_blank" href="https://www.totoprayogo.com/#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+            id="style-null">{{experience.titleExp}}</a>
+            <br>
+            <a href="#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+            id="style-null">{{experience.startDateExp}}</a>
+            <p class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+            id="style-null">{{experience.descExp}}</p>
+          </li>
+        </ul>
+      </div>
+      </div>
     </div>
   </div>
 
+  <div class="container mt-5 mb-5 data-aos" data-aos="fade-up-left" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1900"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+  id="style-null">
+    <div class="row">
+      <div class="container col-md-6 offset-md-2 bg-light rounded px-5 py-2 card ">
+        <div class="container card-header bg-light mx-auto">
+          <h4 id="title">Educación</h4>
+        </div>
+        <div class="card-body">
+        <ul class="timeline" *ngFor="let education of educations" id="timeline">
+          <li>
+            <a target="_blank" href="https://www.totoprayogo.com/#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+            id="style-null">{{education.nameEdu}}</a>
+            <br>
+            <a href="#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+            id="style-null">{{education.startDateEdu}} -  {{education.endDateEdu}}</a>
+            <p class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+            id="style-null">{{education.titleEdu}}</p>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
   <!-------------MODAL AÑADIR------------>
 

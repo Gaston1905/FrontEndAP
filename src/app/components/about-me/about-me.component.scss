@@ -39,15 +39,21 @@ hr {
   -moz-box-shadow: 5px 0 30px 4px rgba(0, 0, 0, 0.55);
 }
 
+#rectangle2 {
+  backdrop-filter: blur(2px);
+  height: 100px;
+  box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.50);
+  -webkit-box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.50);
+  -moz-box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.50);
+}
+
 
 #acomodo {
   margin-top: -3rem;
   background-color: rgb(225, 222, 222);
 }
 
-.bg-gray {
-  background-color: rgb(225, 222, 222);
-}
+
 
 #edit-descripcion {
   margin-top: -3rem;

@@ -1,4 +1,4 @@
-import { experience } from './../../mock/experience.mock';
+import { experiences } from './../../mock/experience.mock';
 import { Component, OnInit } from '@angular/core';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
@@ -16,7 +16,7 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
   styleUrls: ['./experience.component.scss'],
 })
 export class ExperienceComponent implements OnInit {
-  public experiences = experience;
+  public experiences = experiences;
   public editExperience: Experience | undefined;
   public deleteExperience: Experience | undefined;
   faPenToSquare = faPenToSquare;

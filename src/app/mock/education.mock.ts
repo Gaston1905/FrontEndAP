@@ -14,7 +14,7 @@ export const education: Education[] = [
     "idEdu": 2,
     "startDateEdu": 2022,
     "endDateEdu": "Actualmente",
-    "nameEdu": "Centro Universitario de Idiomas (UBA - Agronomía)",
+    "nameEdu": "CUI (UBA - Agronomía)",
     "titleEdu": "Pearson english interactive 1 2.0 - certified A2",
     "picEdu": "../../assets/cui.webp",
   },

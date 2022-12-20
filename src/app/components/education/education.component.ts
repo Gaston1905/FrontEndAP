@@ -8,6 +8,7 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { Education } from 'src/app/model/education';
 import { EducationService } from 'src/app/services/education.service';
 import { education } from 'src/app/mock/education.mock';
+import { experiences } from 'src/app/mock/experience.mock';
 
 
 @Component({
@@ -17,6 +18,7 @@ import { education } from 'src/app/mock/education.mock';
 })
 export class EducationComponent implements OnInit {
   public educations = education;
+  public experience = experiences;
   public educations2 = this.educationService.getEducation();
   public editEducation: Education | undefined;
   public deleteEducation: Education | undefined;
