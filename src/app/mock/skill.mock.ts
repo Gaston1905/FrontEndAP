@@ -10,13 +10,25 @@ export const skill: Skill[] = [
   {
     "idSkill": 2,
     "skillName": "string",
-    "picSkill": "../../assets/CSS.png",
+    "picSkill": "../../assets/CSS.webp",
+    "percent": 65
+  },
+  {
+    "idSkill": 5,
+    "skillName": "string",
+    "picSkill": "../../assets/bootstrap.webp",
     "percent": 65
   },
   {
     "idSkill": 3,
     "skillName": "string",
-    "picSkill": "../../assets/js.webp",
+    "picSkill": "../../assets/javaScript.webp",
+    "percent": 60
+  },
+  {
+    "idSkill": 3,
+    "skillName": "string",
+    "picSkill": "../../assets/ts.webp",
     "percent": 60
   },
   {
@@ -26,22 +38,34 @@ export const skill: Skill[] = [
     "percent": 55
   },
   {
-    "idSkill": 5,
-    "skillName": "string",
-    "picSkill": "../../assets/bootstrap.webp",
-    "percent": 65
-  },
-  {
     "idSkill": 6,
     "skillName": "string",
-    "picSkill": "../../assets/git.webp",
+    "picSkill": "../../assets/java.webp",
     "percent": 55
   },
   {
     "idSkill": 7,
     "skillName": "string",
-    "picSkill": "../../assets/eng.webp",
+    "picSkill": "../../assets/spring.webp",
     "percent": 90
+  },
+  {
+    "idSkill": 8,
+    "skillName": "string",
+    "picSkill": "../../assets/adobe.webp",
+    "percent": 95
+  },
+  {
+    "idSkill": 8,
+    "skillName": "string",
+    "picSkill": "../../assets/MySQL.webp",
+    "percent": 95
+  },
+  {
+    "idSkill": 8,
+    "skillName": "string",
+    "picSkill": "../../assets/eng.webp",
+    "percent": 95
   },
   {
     "idSkill": 8,

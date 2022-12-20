@@ -1,5 +1,5 @@
-<div class="rectangle2 pb-5 rounded-top"></div>
-<div id="main-container">
+<!-- <div class="rectangle2 pb-5 rounded-top"></div> -->
+<div >
 
   <div class="container py-4 " >
     <h2 class="fs-2 mt-5 pt-3 font-monospace">Hards <span id="color">&</span> Soft</h2>
@@ -17,14 +17,14 @@
 
 
 
-      <div class="row"  >
-        <div class=" text-center col-sm-4 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="50"
-          data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-          data-aos-anchor-placement="top-center" *ngFor="let skill of skills" >
+      <div class="row data-aos">
+        <div class=" text-center col-sm-4 col-md-4 col-lg-3"  *ngFor="let skill of skills">
 
 
 
-
+        <img src="{{skill.picSkill}}" class="mt-3 pt-4" id="icon-skill" alt="icon-skills" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="100"
+        data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
 
           <!-- <a *ngIf="isloged()" (click)="onOpenModal('edit', skill)" class="btn text-primary tooltips "
             data-placement="top" data-toggle="tooltip" data-original-title="edit">
@@ -38,15 +38,15 @@
             </fa-icon>
           </a> -->
 
-          <!-- <img src="{{skill.picSkill}}" class="mt-3 pt-4" width="75" alt="icon-skills" id="icon-skill"> -->
+          <!-- <img src="{{skill.picSkill}}"  width="75" alt="icon-skills" id="icon-skill"> -->
 
 
-          <circle-progress id="circle" [percent]="skill.percent" [radius]="70" [showImage]="true" [imageHeight]="50"
+          <!-- <circle-progress id="circle" [percent]="skill.percent" [radius]="70" [showImage]="true" [imageHeight]="50"
             [imageWidth]="50" [outerStrokeWidth]="12" [innerStrokeWidth]="2" [imageSrc]="skill.picSkill"
             [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="2000" [lazy]="true">
           </circle-progress>
           <span style="color:rgb(225,222,222); font-size:0px"> {{ skill.skillName }}
-          </span>
+          </span> -->
         </div>
       </div>
     </div>
@@ -164,14 +164,14 @@
     </div> -->
 
     <!-- Notification for no skills -->
-    <div *ngIf="skills?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+    <!-- <div *ngIf="skills?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
       <div class="alert alert-info" role="alert">
         <h4 class="alert-heading">No hay Skills!</h4>
         <p>No hay skills cargadas.</p>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-
-<div class="rectangle mb-5 rounded" id="rectangle"></div>
+<!--
+<div class="rectangle mb-5 rounded" id="rectangle"></div> -->
