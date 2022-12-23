@@ -10,7 +10,7 @@ export const skill: Skill[] = [
   {
     "idSkill": 2,
     "skillName": "string",
-    "picSkill": "../../assets/CSS.webp",
+    "picSkill": "../../assets/css.webp",
     "percent": 65
   },
   {
@@ -22,7 +22,7 @@ export const skill: Skill[] = [
   {
     "idSkill": 3,
     "skillName": "string",
-    "picSkill": "../../assets/javaScript.webp",
+    "picSkill": "../../assets/javascript.webp",
     "percent": 60
   },
   {
@@ -58,7 +58,7 @@ export const skill: Skill[] = [
   {
     "idSkill": 8,
     "skillName": "string",
-    "picSkill": "../../assets/MySQL.webp",
+    "picSkill": "../../assets/mysql.webp",
     "percent": 95
   },
   {

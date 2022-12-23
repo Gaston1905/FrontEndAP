@@ -26,11 +26,13 @@
               </fa-icon>
             </a> -->
 
+<div class="container">
+<div class="row g-0">
 
-<div class="container flex d-flex">
 
-  <div class="container mt-5 mb-5 data-aos" data-aos="fade-right" data-aos-offset="25" data-aos-delay="50" data-aos-duration="2000"
-  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+
+  <div class="col-lg-6 order-lg-1 mt-5 mb-5 data-aos" data-aos="flip-right" data-aos-offset="25" data-aos-delay="50" data-aos-duration="2000"
+  data-aos-easing="ease-out-cubic" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
   id="style-null">
     <div class="row">
       <div class="col-md-6 offset-md-2 bg-light rounded px-5 py-2 card ">
@@ -40,14 +42,14 @@
         <div class="card-body">
         <ul class="timeline" *ngFor="let experience of experience" id="timeline">
           <li>
-            <a target="_blank" href="https://www.totoprayogo.com/#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            <a target="_blank" href="https://www.totoprayogo.com/#" class=" fw-bold data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
             id="style-null">{{experience.titleExp}}</a>
             <br>
-            <a href="#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            <a href="#" class="fw-bold data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
             id="style-null">{{experience.startDateExp}}</a>
-            <p class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            <p class=" fw-bold data-aos" data-aos=" fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
             id="style-null">{{experience.descExp}}</p>
           </li>
@@ -57,8 +59,8 @@
     </div>
   </div>
 
-  <div class="container mt-5 mb-5 data-aos" data-aos="fade-up-left" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1900"
-  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+  <div class="col-lg-6 order-lg-2 mt-5 mb-5 data-aos" data-aos="flip-left" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1900"
+  data-aos-easing="ease-out-cubic" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
   id="style-null">
     <div class="row">
       <div class="container col-md-6 offset-md-2 bg-light rounded px-5 py-2 card ">
@@ -68,14 +70,14 @@
         <div class="card-body">
         <ul class="timeline" *ngFor="let education of educations" id="timeline">
           <li>
-            <a target="_blank" href="https://www.totoprayogo.com/#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            <a target="_blank" href="https://www.totoprayogo.com/#" class=" fw-bold data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
             id="style-null">{{education.nameEdu}}</a>
             <br>
-            <a href="#" class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            <a href="#" class=" fw-bold data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
             id="style-null">{{education.startDateEdu}} -  {{education.endDateEdu}}</a>
-            <p class="data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
+            <p class=" fw-bold data-aos" data-aos="fade-up" data-aos-offset="25" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
             id="style-null">{{education.titleEdu}}</p>
           </li>
@@ -85,8 +87,10 @@
     </div>
   </div>
 
-</div>
 
+
+</div>
+</div>
   <!-------------MODAL AÑADIR------------>
 
   <!-- <div class="modal fade" id="addEducationModal" tabindex="-1" role="dialog" aria-labelledby="addEducationModalLabel"
