@@ -21,7 +21,7 @@
     "zone.js": "~0.11.5"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.6",
+    "@angular-devkit/build-angular": "^14.2.12",
     "@types/bootstrap": "^5.1.12"
   }
 }
