@@ -1,32 +1,45 @@
-<div class="rectangle2 bg-gray pb-5 rounded-top"></div>
-<div class="container bg-gray p-5 " id="main-container">
+<!-- <div class="rectangle pb-5 rounded-top"></div> -->
+<div class="pb-5 pt-5"></div>
+<div class="pt-5"></div>
 
-  <div class="container py-4 contenedor" *ngFor="let aboutme of aboutme">
-    <h2 class="fs-1 mb-3 mt-5">Sobre mí</h2>
 
-    <div class="row align-items-center py-3 pb-5">
-      <div class="col-sm-4" data-aos="zoom-in" data-aos-offset="3" data-aos-delay="50" data-aos-duration="1000"
+<div class="p-5 rounded-top ">
+
+  <div class="container py-4 contenedor" >
+    <h2 class="fs-1 pt-5 mb-3 mt-3 font-monospace data-aos" data-aos="fade-right" data-aos-offset="3" data-aos-delay="50" data-aos-duration="1800"
+    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+    data-aos-anchor-placement="top-center">ACERCA DE MI</h2>
+    <hr class="data-aos" data-aos="fade-right" data-aos-offset="3" data-aos-delay="100" data-aos-duration="2000"
+    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+    data-aos-anchor-placement="top-center">
+
+    <div class="row align-items-center py-3 pb-5 data-aos">
+      <div class="col-sm-4">
+        <img data-aos="zoom-in" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
         data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center">
-        <img mat-card-image src="{{aboutme.profileAboutMe}}" class="img-thumbnail w-100 mb-5">
-        <a *ngIf="isloged()" (click)="onOpenModal('edit', aboutme)" class="btn text-primary tooltips "
+        data-aos-anchor-placement="top-center"  src="{{aboutme.pictureAboutMe}}" class="img-thumbnail mb-5" alt="picture-profile" width="480">
+        <!-- <a *ngIf="isloged()" (click)="onOpenModal('edit', aboutme)" class="btn text-primary tooltips "
           data-placement="top" data-toggle="tooltip" data-original-title="edit">
           <fa-icon [icon]="faPenToSquare">
           </fa-icon>
-        </a>
+        </a> -->
       </div>
-      <div class="col-sm-8 mt-3 text-white pb-5" data-aos="zoom-in" data-aos-offset="10" data-aos-delay="50"
-        data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+      <div class="col-sm-8 mt-3 text-white pb-5 font-monospace">
+        <h3 class="fs-5" data-aos="flip-right" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">{{aboutme.titleAboutMe}}</h3>
+        <hr data-aos="flip-left" data-aos-offset="3" data-aos-delay="150" data-aos-duration="2000"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
         data-aos-anchor-placement="top-center">
-        <h3 class="fs-5">{{aboutme.titleAboutMe}}</h3>
-        <p class="fs-4 rounded-3 lh-1" id="description">{{aboutme.descAboutMe}}</p>
+        <p class="fs-4 rounded-3 lh-1" id="description" data-aos="flip-right" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">{{aboutme.descAboutMe}}</p>
       </div>
     </div>
   </div>
 </div>
 
-
-<div class="rectangle bg-gray rounded-bottom"></div>
+<!-- <div class="rectangle mb-5 rounded" id="rectangle2"></div> -->
 
 
 <!--------Edit Info    --------------------------------->
@@ -57,7 +70,7 @@
 
           <div class="form-group">
             <label for="profileAboutMe">Foto de Perfil</label>
-            <input type="text" ngModel="{{ editAboutMe?.profileAboutMe }}" name="profileAboutMe" class="form-control"
+            <input type="text" ngModel="{{ editAboutMe?.pictureAboutMe }}" name="profileAboutMe" class="form-control"
               id="profileAboutMe" placeholder="Foto de Perfil" />
           </div>
 
@@ -74,7 +87,7 @@
             <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">
               Cerrar
             </button>
-            <button (click)="onUpdateAboutMe(editForm.value)" data-dismiss="modal" class="btn btn-primary">
+            <button data-dismiss="modal" class="btn btn-primary">
               Salvar Cambios
             </button>
           </div>

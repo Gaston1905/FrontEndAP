@@ -1,34 +1,43 @@
 #principio {
-  padding: 0 20px 0 20px;
-}
-.row {
-  padding: 50px 0 150px 0;
+  padding: 0 20px 75px 20px;
 }
 
 #titulo {
   font-size: 26px;
 }
 
-.rectangle {
-  height: 100px;
-  margin-top: 45px;
-  transform: skewY(4deg);
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-}
-
-#arrangement {
-  margin-top: -3rem;
-  background-color: rgb(225, 222, 222);
-}
-
-.bg-gray {
-  background-color: rgb(225, 222, 222);
-}
-
-#color {
+#color, hr {
   color: #0e77bb;
 }
+
+@media (max-width: 767px) {
+  #principio {
+    width: auto;
+  }
+}
+
+#circle,
+#icon-skill {
+  filter: drop-shadow(0 5px 8px rgba(1, 1, 85, 0.603));
+
+}
+
+#rectangle {
+  backdrop-filter: blur(2px);
+  height: 100px;
+  box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.50);
+  -webkit-box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.50);
+  -moz-box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.50);
+}
+
+.rectangle2 {
+  color:rgb(225, 222, 222);
+  height: 100px;
+  backdrop-filter: blur(1px);
+  box-shadow: 5px 0 30px 4px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 5px 0 30px 4px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 5px 0 30px 4px rgba(0, 0, 0, 0.55);
+}
+
 
 

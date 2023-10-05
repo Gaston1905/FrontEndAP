@@ -1,46 +1,58 @@
-<div class="container pt-5">
-  <div class="row agradecimiento pt-5">
-    <p class="font2 text-center">Gracias por tu visita</p>
+<div class="container-fluid ">
+  <div class="row agradecimiento pt-2">
+    <p class="font2 text-center" id="phrase-first">Gracias por tu visita</p>
   </div>
 
 
   <div class="contacto">
-    <p class="w-25 mx-auto text-center pb-4">Pongamonos en contacto!<br />
-      Si tenes alguna duda o deseas saber algo más de mi podes hacer click en el siguiente botón y llenar el
-      formulario.<br />
+    <p class="w-25 mx-auto text-center pb-4 fw-bold">Pongamonos en contacto!<br />
+      Si tenes alguna duda o deseas saber algo más de mi podes hacer click en el siguiente botón y elegir el canal de comunicación.<br />
       Voy a hacer todo lo
       posible por contestar
     </p>
     <button type="button" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-      aria-controls="collapseExample" class="btn btn-outline-secondary btn-lg px-4"
+      aria-controls="collapseExample" class="btn text-white btn-lg px-4"
       id="link-animado">Contactame</button>
 
     <div class="collapse" id="collapseExample" data-bs-dismiss="button">
       <ul class="navbar-nav ml-auto d-flex flex-row bd-highlight align-items-center">
-        <li class=" nav-item active ms-1 me-1">
-          <a class="nav-link" id="link-animado" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIN.png?raw=true"></a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active" id="link-animado" href="https://www.instagram.com/pitu_gaitan/"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgIG.png?raw=true"></a>
-        </li>
-        <li class="nav-item active ms-1 me-1">
-          <a class="nav-link active" id="link-animado" href="https://github.com/Gaston1905"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgGIT.png?raw=true"></a>
+        <li class=" nav-item active ms-1 me-3">
+          <a target="_blank" class="nav-link" id="link-animado" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
+              src="../../../assets/linkedin.webp" alt="icon-linkedin" width="28"></a>
         </li>
         <li class="nav-item active ms-1 me-3">
-          <a class="nav-link active" id="link-animado" href="https://www.facebook.com/pitu.pitu.7982/"><img
-              src="https://github.com/Gaston1905/portfolio/blob/master/images/imgFB.png?raw=true"></a>
+          <a target="_blank" class="nav-link active" id="link-animado" href="https://www.instagram.com/gaitan_dev/"><img
+              src="../../../assets/instagram.webp" alt="icon-instagram" width="28"></a>
+        </li>
+        <li class="nav-item active ms-1 me-3">
+          <a target="_blank" class="nav-link active" id="link-animado" href="https://github.com/Gaston1905"><img
+              src="../../../assets/github.webp" alt="icon-github" width="28"></a>
+        </li>
+        <li class="nav-item active ms-1 me-3">
+          <a target="_blank" class="nav-link active" id="link-animado" href="https://www.facebook.com/pitu.pitu.7982/"><img
+              src="../../../assets/facebook.webp" alt="icon-facebook" width="28"></a>
         </li>
       </ul>
     </div>
 
   </div>
-  <div class="row">
-    <footer>
-      <p>Gaitan Gaston | @Argentina Programa 2022</p>
-      <p>Entre Ríos, Paraná, Argentina</p>
-    </footer>
+
+
+
+
+  <footer  class="rounded pt-3" id="footer-style">
+    <p class=" fs-5 fw-bold">GASTON GAITAN</p>
+    <hr>
+    <p class="fw-bold">DISEÑADOR Y DESARROLLADOR WEB</p>
+  </footer>
+
+<div class="modal fade bd-example-modal-lg" id="modalContact">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 20%">
+      <div class="modal-header">
+        <h5 class="modal-title">Contacto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+    </div>
   </div>
 </div>

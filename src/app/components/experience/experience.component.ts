@@ -1,7 +1,7 @@
+import { experiences } from './../../mock/experience.mock';
 import { Component, OnInit } from '@angular/core';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
@@ -16,7 +16,7 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
   styleUrls: ['./experience.component.scss'],
 })
 export class ExperienceComponent implements OnInit {
-  public experiences: Experience[] = [];
+  public experiences = experiences;
   public editExperience: Experience | undefined;
   public deleteExperience: Experience | undefined;
   faPenToSquare = faPenToSquare;
@@ -25,26 +25,25 @@ export class ExperienceComponent implements OnInit {
 
   constructor(
     private experienceService: ExperienceService,
-    private modalService: NgbModal,
     private autenticacionService: AutenticacionService
   ) {}
 
   isloged = () => this.autenticacionService.loggedIn();
 
   ngOnInit(): void {
-    this.getExperience();
+    // this.getExperience();
   }
 
-  public getExperience(): void {
-    this.experienceService.getExperience().subscribe({
-      next: (Response: Experience[]) => {
-        this.experiences = Response;
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
+  // public getExperience(): void {
+  //   this.experienceService.getExperience().subscribe({
+  //     next: (Response: Experience[]) => {
+  //       this.experiences = Response;
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     },
+  //   });
+  // }
 
   public onOpenModal(mode: String, experience?: Experience): void {
     const container = document.getElementById('main-container');
@@ -65,45 +64,45 @@ export class ExperienceComponent implements OnInit {
     button.click();
   }
 
-  public onAddExperience(addForm: NgForm): void {
-    document.getElementById('add-experience-form')?.click();
-    this.experienceService.addExperience(addForm.value).subscribe({
-      next: (response: Experience) => {
-        console.log(response);
-        this.getExperience();
-        addForm.reset();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-        addForm.reset();
-      },
-    });
-  }
+  // public onAddExperience(addForm: NgForm): void {
+  //   document.getElementById('add-experience-form')?.click();
+  //   this.experienceService.addExperience(addForm.value).subscribe({
+  //     next: (response: Experience) => {
+  //       console.log(response);
+  //       this.getExperience();
+  //       addForm.reset();
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //       addForm.reset();
+  //     },
+  //   });
+  // }
 
-  public onUpdateExperience(experience: Experience) {
-    this.editExperience = experience;
-    document.getElementById('add-experience-form')?.click();
-    this.experienceService.updateExperience(experience).subscribe({
-      next: (response: Experience) => {
-        console.log(response);
-        this.getExperience();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
+  // public onUpdateExperience(experience: Experience) {
+  //   this.editExperience = experience;
+  //   document.getElementById('add-experience-form')?.click();
+  //   this.experienceService.updateExperience(experience).subscribe({
+  //     next: (response: Experience) => {
+  //       console.log(response);
+  //       this.getExperience();
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     },
+  //   });
+  // }
 
-  public onDeleteExperience(idExp: number): void {
-    this.experienceService.deleteExperience(idExp).subscribe({
-      next: (response: void) => {
-        console.log(response);
-        this.getExperience();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
+  // public onDeleteExperience(idExp: number): void {
+  //   this.experienceService.deleteExperience(idExp).subscribe({
+  //     next: (response: void) => {
+  //       console.log(response);
+  //       this.getExperience();
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     },
+  //   });
+  // }
 
 }

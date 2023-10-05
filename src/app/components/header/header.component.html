@@ -1,27 +1,28 @@
-<header id="main-container">
+<header class="container-fluid" id="main-container">
+
   <div class=" container col-xxl-8">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="min-width">
+    <div class="row flex-lg-row-reverse align-items-center g-5" id="center-max-width">
 
       <div class="col-10 col-sm-8 col-lg-6" id="min-whidt-center">
-        <img src="https://github.com/Gaston1905/portfolio/blob/master/images/Sin-t%C3%ADtulo-2.png?raw=true"
-          class="d-block mx-lg-auto img-fluid" alt="Foto de Portada" width="400" height="200" loading="lazy">
+        <img src="../../../assets/img-header.webp"
+          class="d-block mx-lg-auto img-fluid" alt="cover image" id="img-front">
       </div>
 
       <div class="col-lg-6 d-flex flex-column align-items-center" *ngIf="info">
 
 
-        <h1 class=" display-5 fw-bold lh-1 mb-3 fs-1 text-white">{{info?.nameInfo}}<span class="celeste">
-            {{info?.surnameInfo}}</span>
+        <h1 class="display-5 fw-bold mb-3 celeste" id="shadow">{{info.nameInfo}}
+            {{info.surnameInfo}}
 
-          <a *ngIf="isloged()" (click)="onOpenModal('edit', info)" class="btn text-primary tooltips "
+          <!-- <a *ngIf="isloged()" (click)="onOpenModal('edit', info)" class="btn text-primary tooltips"
             data-placement="top" data-toggle="tooltip" data-original-title="edit">
             <fa-icon [icon]="faPenToSquare">
             </fa-icon>
-          </a>
+          </a> -->
 
         </h1>
 
-        <p class="lead fs-3 text-white">{{info?.titleInfo}}</p>
+        <p class="lead display-5 fw-bold me-4" id="text-shadow">{{info.titleInfo}}</p>
 
       </div>
 
@@ -33,36 +34,34 @@
 
 
 
-
-
 <!--  Edit info modal  -->
-<div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="editInfoModalLabel"
+<!-- <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="editInfoModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-center" id="editInfoModalLabel">
-          {{ info?.nameInfo }}
+          {{ info.nameInfo }}
         </h5>
       </div>
       <div class="modal-body">
         <form #editForm="ngForm">
           <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="text" ngModel="{{ info?.nameInfo }}" name="nameInfo" class="form-control" id="nameInfo"
+            <input type="text" ngModel="{{ info.nameInfo }}" name="nameInfo" class="form-control" id="nameInfo"
               aria-describedby="nameInfo" placeholder="Nombre" />
           </div>
-          <input type="hidden" ngModel="{{ info?.idInfo }}" name="idInfo" class="form-control" id="idInfo"
+          <input type="hidden" ngModel="{{ info.idInfo }}" name="idInfo" class="form-control" id="idInfo"
             placeholder="" />
 
           <div class="form-group">
             <label for="surname">Apellido</label>
-            <input type="text" ngModel="{{ info?.surnameInfo }}" name="surnameInfo" class="form-control"
+            <input type="text" ngModel="{{ info.surnameInfo }}" name="surnameInfo" class="form-control"
               id="surnameInfo" placeholder="Apellido" />
           </div>
           <div class="form-group">
             <label for="titleInfo">Titulo</label>
-            <input type="text" ngModel="{{ info?.titleInfo }}" name="titleInfo" class="form-control" id="titleInfo"
+            <input type="text" ngModel="{{ info.titleInfo }}" name="titleInfo" class="form-control" id="titleInfo"
               placeholder="titulo" />
           </div>
           <div class="modal-footer">
@@ -77,4 +76,5 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+

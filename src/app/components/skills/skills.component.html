@@ -1,169 +1,177 @@
-<div class="rectangle bg-gray rounded-top" id="main-container"></div>
-<div class="container mx-auto" id="arrangement">
+<!-- <div class="rectangle2 pb-5 rounded-top"></div> -->
+<div >
 
-  <div class="row" id="principio">
-    <h2 class="fs-2 mt-5 pt-3">Hards <span id="color">&</span> Soft</h2>
-    <h2 class="fs-1 fw-bolder" id="color">Skills</h2>
+  <div class="container py-4 " >
+    <h2 class="fs-2 mt-5 pt-3 font-monospace">Hards <span id="color">&</span> Soft</h2>
+      <h2 class="fs-1 fw-bolder font-monospace" id="color">SKILLS</h2>
+      <hr>
 
-    <div *ngIf="isloged()" class="text-center">
-      <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
-        <a class="nav-link" style="color: #fff">Agregar Skill <span class="sr-only">(current)</span></a>
-      </button>
-    </div>
+    <div class="row mx-auto flex-column align-content-center" id="principio">
 
 
-
-    <div class="row">
-      <div class=" text-center col-sm-4 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="50"
-        data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center" *ngFor="let skill of skills">
+      <!-- <div *ngIf="isloged()" class="text-center">
+        <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
+          <a class="nav-link" style="color: #fff">Agregar Skill <span class="sr-only">(current)</span></a>
+        </button>
+      </div> -->
 
 
 
-
-
-        <a *ngIf="isloged()" (click)="onOpenModal('edit', skill)" class="btn text-primary tooltips "
-          data-placement="top" data-toggle="tooltip" data-original-title="edit">
-          <fa-icon [icon]="faPenToSquare">
-          </fa-icon>
-        </a>
-
-        <a *ngIf="isloged()" (click)="onOpenModal('delete', skill)" class="btn text-danger  tooltips"
-          data-placement="top" data-toggle="tooltip" data-original-title="delete">
-          <fa-icon [icon]="faXmarkCircle">
-          </fa-icon>
-        </a>
+      <div class="row data-aos">
+        <div class=" text-center col-sm-4 col-md-4 col-lg-3"  *ngFor="let skill of skills">
 
 
 
+        <img src="{{skill.picSkill}}" class="mt-3 pt-4" id="icon-skill" alt="icon-skills" data-aos="zoom-in" data-aos-offset="25" data-aos-delay="100"
+        data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
 
-        <circle-progress [percent]="skill.percent" [radius]="100" [showImage]="true" [imageHeight]="70"
-          [imageWidth]="70" [outerStrokeWidth]="12" [innerStrokeWidth]="2" [imageSrc]="skill.picSkill"
-          [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="1000">
-        </circle-progress>
-        <span style="color:rgb(225,222,222); font-size:0px"> {{ skill.skillName }}
-        </span>
-      </div>
-    </div>
-  </div>
+          <!-- <a *ngIf="isloged()" (click)="onOpenModal('edit', skill)" class="btn text-primary tooltips "
+            data-placement="top" data-toggle="tooltip" data-original-title="edit">
+            <fa-icon [icon]="faPenToSquare">
+            </fa-icon>
+          </a> -->
+
+          <!-- <a *ngIf="isloged()" (click)="onOpenModal('delete', skill)" class="btn text-danger  tooltips"
+            data-placement="top" data-toggle="tooltip" data-original-title="delete">
+            <fa-icon [icon]="faXmarkCircle">
+            </fa-icon>
+          </a> -->
+
+          <!-- <img src="{{skill.picSkill}}"  width="75" alt="icon-skills" id="icon-skill"> -->
 
 
-  <!-- Add Skill Modal -->
-  <div class="modal fade" id="addSkillModal" tabindex="-1" role="dialog" aria-labelledby="addSkillModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="addSkillModalLabel">Agregar Skill</h5>
-        </div>
-        <div class="modal-body">
-          <form #addForm="ngForm" (ngSubmit)="onAddSkill(addForm)">
-            <div class="form-group">
-              <label for="skillName">Skill</label>
-              <input type="text" ngModel name="skillName" class="form-control" id="skillName" placeholder="Nombre"
-                required />
-            </div>
-            <div class="form-group">
-              <label for="percent">Porcentaje</label>
-              <input type="number" min="0" max="100" step="5" ngModel name="percent" class="form-control" id="percent"
-                placeholder="Porcentaje" required />
-            </div>
-
-            <div class="form-group">
-              <label for="picSkill">URL de la imagen</label>
-              <input type="text" ngModel name="picSkill" class="form-control" id="picSkill"
-                placeholder="URL de la imagen" required />
-            </div>
-            <div class="modal-footer">
-              <button type="button" id="add-skill-form" class="btn btn-secondary" data-dismiss="modal">
-                Cerrar
-              </button>
-              <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">
-                Guardar Cambios
-              </button>
-            </div>
-          </form>
+          <!-- <circle-progress id="circle" [percent]="skill.percent" [radius]="70" [showImage]="true" [imageHeight]="50"
+            [imageWidth]="50" [outerStrokeWidth]="12" [innerStrokeWidth]="2" [imageSrc]="skill.picSkill"
+            [outerStrokeColor]="'#0e77bb'" [innerStrokeColor]="'#20B2AA'" [animation]="true" [animationDuration]="2000" [lazy]="true">
+          </circle-progress>
+          <span style="color:rgb(225,222,222); font-size:0px"> {{ skill.skillName }}
+          </span> -->
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Edit skill modal -->
-  <div class="modal fade" id="editSkillModal" tabindex="-1" role="dialog" aria-labelledby="skillEditModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="updateSkillModalLabel">
-            Editar Skill {{ editSkill?.skillName }}
-          </h5>
-        </div>
-        <div class="modal-body">
-          <form #editForm="ngForm">
-            <div class="form-group">
-              <label for="skillName">Titulo</label>
-              <input type="text" ngModel="{{ editSkill?.skillName }}" name="skillName" class="form-control"
-                id="skillName1" aria-describedby="emailHelp" placeholder="skill name" />
-            </div>
-            <input type="hidden" ngModel="{{ editSkill?.idSkill }}" name="idSkill" class="form-control" id="idSkill1"
-              placeholder="" />
 
-            <div class="form-group">
-              <label for="percent">Porcentaje</label>
-              <input type="number" min="0" max="100" step="5" ngModel="{{ editSkill?.percent }}" name="percent"
-                class="form-control" id="percent1" placeholder="Porcentaje" />
-            </div>
+    <!-- Add Skill Modal -->
+    <!-- <div class="modal fade" id="addSkillModal" tabindex="-1" role="dialog" aria-labelledby="addSkillModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addSkillModalLabel">Agregar Skill</h5>
+          </div>
+          <div class="modal-body">
+            <form #addForm="ngForm" (ngSubmit)="onAddSkill(addForm)">
+              <div class="form-group">
+                <label for="skillName">Skill</label>
+                <input type="text" ngModel name="skillName" class="form-control" id="skillName" placeholder="Nombre"
+                  required />
+              </div>
+              <div class="form-group">
+                <label for="percent">Porcentaje</label>
+                <input type="number" min="0" max="100" step="5" ngModel name="percent" class="form-control" id="percent"
+                  placeholder="Porcentaje" required />
+              </div>
 
-            <div class="form-group">
-              <label for="picSkill">URL de la imagen</label>
-              <input type="text" ngModel="{{ editSkill?.picSkill }}" name="picSkill" class="form-control" id="picSkill1"
-                placeholder="URL de la imagen" />
-            </div>
-            <div class="modal-footer">
-              <button type="button" id="3" data-dismiss="modal" class="btn btn-secondary">
-                Cerrar
-              </button>
-              <button (click)="onUpdateSkill(editForm.value)" data-dismiss="modal" class="btn btn-primary">
-                Guardar Cambios
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Delete skill modal -->
-  <div class="modal fade" id="deleteSkillModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteModelLabel">Borrar Skill</h5>
-        </div>
-        <div class="modal-body">
-          <p style="color: rgb(255, 255, 255)">
-            Está seguro que desea borrar
-            {{ deleteSkill?.skillName }}?
-          </p>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-              No
-            </button>
-            <button (click)="onDeleteSkill(deleteSkill!.idSkill)" class="btn btn-danger" data-dismiss="modal">
-              Si
-            </button>
+              <div class="form-group">
+                <label for="picSkill">URL de la imagen</label>
+                <input type="text" ngModel name="picSkill" class="form-control" id="picSkill"
+                  placeholder="URL de la imagen" required />
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="add-skill-form" class="btn btn-secondary" data-dismiss="modal">
+                  Cerrar
+                </button>
+                <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">
+                  Guardar Cambios
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
 
-  <!-- Notification for no skills -->
-  <div *ngIf="skills?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
-    <div class="alert alert-info" role="alert">
-      <h4 class="alert-heading">No hay Skills!</h4>
-      <p>No hay skills cargadas.</p>
+    <!-- Edit skill modal -->
+    <!-- <div class="modal fade" id="editSkillModal" tabindex="-1" role="dialog" aria-labelledby="skillEditModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="updateSkillModalLabel">
+              Editar Skill {{ editSkill?.skillName }}
+            </h5>
+          </div>
+          <div class="modal-body">
+            <form #editForm="ngForm">
+              <div class="form-group">
+                <label for="skillName">Titulo</label>
+                <input type="text" ngModel="{{ editSkill?.skillName }}" name="skillName" class="form-control"
+                  id="skillName1" aria-describedby="emailHelp" placeholder="skill name" />
+              </div>
+              <input type="hidden" ngModel="{{ editSkill?.idSkill }}" name="idSkill" class="form-control" id="idSkill1"
+                placeholder="" />
+
+              <div class="form-group">
+                <label for="percent">Porcentaje</label>
+                <input type="number" min="0" max="100" step="5" ngModel="{{ editSkill?.percent }}" name="percent"
+                  class="form-control" id="percent1" placeholder="Porcentaje" />
+              </div>
+
+              <div class="form-group">
+                <label for="picSkill">URL de la imagen</label>
+                <input type="text" ngModel="{{ editSkill?.picSkill }}" name="picSkill" class="form-control" id="picSkill1"
+                  placeholder="URL de la imagen" />
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="3" data-dismiss="modal" class="btn btn-secondary">
+                  Cerrar
+                </button>
+                <button (click)="onUpdateSkill(editForm.value)" data-dismiss="modal" class="btn btn-primary">
+                  Guardar Cambios
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Delete skill modal -->
+    <!-- <div class="modal fade" id="deleteSkillModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModelLabel">Borrar Skill</h5>
+          </div>
+          <div class="modal-body">
+            <p style="color: rgb(255, 255, 255)">
+              Está seguro que desea borrar
+              {{ deleteSkill?.skillName }}?
+            </p>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                No
+              </button>
+              <button (click)="onDeleteSkill(deleteSkill!.idSkill)" class="btn btn-danger" data-dismiss="modal">
+                Si
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Notification for no skills -->
+    <!-- <div *ngIf="skills?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+      <div class="alert alert-info" role="alert">
+        <h4 class="alert-heading">No hay Skills!</h4>
+        <p>No hay skills cargadas.</p>
+      </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<!--
+<div class="rectangle mb-5 rounded" id="rectangle"></div> -->

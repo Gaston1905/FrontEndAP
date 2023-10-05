@@ -1,3 +1,4 @@
+import { skill } from './../../mock/skill.mock';
 import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
@@ -14,7 +15,7 @@ import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
-  public skills: Skill[] = [];
+  public skills = skill;
   public editSkill: Skill | undefined;
   public deleteSkill: Skill | undefined;
   faPenToSquare = faPenToSquare;
@@ -28,7 +29,7 @@ export class SkillsComponent implements OnInit {
   isloged = () => this.autenticacionService.loggedIn();
 
   ngOnInit(): void {
-    this.getSkill();
+    // this.getSkill();
   }
 
   public getSkill(): void {
@@ -101,5 +102,5 @@ export class SkillsComponent implements OnInit {
       },
     });
   }
-  
+
 }

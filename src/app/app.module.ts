@@ -1,7 +1,8 @@
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpErrorInterceptor } from './services/http-error-interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -19,10 +20,9 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AppRoutingModule } from './app-routing.module';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { InterceptorService } from './services/interceptor.service';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { EducationComponent } from './components/education/education.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -34,44 +34,48 @@ import { SkillsService } from './services/skills.service';
 import { InfoService } from './services/info.service';
 import { EducationService } from './services/education.service';
 import { AboutMeService } from './services/about-me.service';
+import { LoadingPageService } from './services/loading-page.service';
+
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ExperienceComponent,
-    EducationComponent,
-    FooterComponent,
-    PortfolioComponent,
-    NavbarComponent,
-    AboutMeComponent,
-    SkillsComponent,
-    ProjectComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    NgbModule,
-    FormsModule,
-    FontAwesomeModule,
-    MatCardModule,
-    NgCircleProgressModule.forRoot({}),
-    HttpClientModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-  ],
-  providers: [
-    AboutMeService,
-    EducationService,
-    InfoService,
-    ExperienceService,
-    SkillsService,
-    ProjectService,
-    AutenticacionService,
-    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
-  ],
-  bootstrap: [AppComponent],
-  entryComponents: [],
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        HeaderComponent,
+        ExperienceComponent,
+        EducationComponent,
+        FooterComponent,
+        PortfolioComponent,
+        AboutMeComponent,
+        SkillsComponent,
+        ProjectComponent,
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        FormsModule,
+        FontAwesomeModule,
+        NgCircleProgressModule.forRoot({}),
+        HttpClientModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+    ],
+    providers: [
+      { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true},
+        AboutMeService,
+        EducationService,
+        InfoService,
+        ExperienceService,
+        SkillsService,
+        ProjectService,
+        AutenticacionService,
+        LoadingPageService,
+        { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

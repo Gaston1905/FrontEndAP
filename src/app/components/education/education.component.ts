@@ -7,11 +7,9 @@ import { NgForm } from '@angular/forms';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { Education } from 'src/app/model/education';
 import { EducationService } from 'src/app/services/education.service';
-import {
-  CdkDragDrop,
-  moveItemInArray,
-  transferArrayItem,
-} from '@angular/cdk/drag-drop';
+import { education } from 'src/app/mock/education.mock';
+import { experiences } from 'src/app/mock/experience.mock';
+
 
 @Component({
   selector: 'app-education',
@@ -19,7 +17,8 @@ import {
   styleUrls: ['./education.component.scss'],
 })
 export class EducationComponent implements OnInit {
-  public educations: Education[] = [];
+  public educations = education;
+  public experience = experiences;
   public educations2 = this.educationService.getEducation();
   public editEducation: Education | undefined;
   public deleteEducation: Education | undefined;
@@ -36,19 +35,19 @@ export class EducationComponent implements OnInit {
   isloged = () => this.autenticacionService.loggedIn();
 
   ngOnInit(): void {
-    this.getEducation();
+    // this.getEducation();
   }
 
-  public getEducation(): void {
-    this.educationService.getEducation().subscribe({
-      next: (response: Education[]) => {
-        this.educations = response;
-      },
-      error: (error: HttpErrorResponse) => {
-        console.log('error');
-      },
-    });
-  }
+  // public getEducation(): void {
+  //   this.educationService.getEducation().subscribe({
+  //     next: (response: Education[]) => {
+  //       this.educations = response;
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       console.log('error');
+  //     },
+  //   });
+  // }
 
   public onOpenModal(mode: string, education?: Education): void {
     const container = document.getElementById('main-container');
@@ -70,44 +69,44 @@ export class EducationComponent implements OnInit {
     button.click();
   }
 
-  public onAddEducation(addForm: NgForm): void {
-    document.getElementById('add-education-form')?.click();
-    this.educationService.addEducation(addForm.value).subscribe({
-      next: (response: Education) => {
-        console.log(response);
-        this.getEducation();
-        addForm.reset();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-        addForm.reset();
-      },
-    });
-  }
+  // public onAddEducation(addForm: NgForm): void {
+  //   document.getElementById('add-education-form')?.click();
+  //   this.educationService.addEducation(addForm.value).subscribe({
+  //     next: (response: Education) => {
+  //       console.log(response);
+  //       this.getEducation();
+  //       addForm.reset();
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //       addForm.reset();
+  //     },
+  //   });
+  // }
 
-  public onUpdateEducation(education: Education) {
-    this.editEducation = education;
-    document.getElementById('add-education-form')?.click();
-    this.educationService.updateEducation(education).subscribe({
-      next: (response: Education) => {
-        console.log(response);
-        this.getEducation();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
+  // public onUpdateEducation(education: Education) {
+  //   this.editEducation = education;
+  //   document.getElementById('add-education-form')?.click();
+  //   this.educationService.updateEducation(education).subscribe({
+  //     next: (response: Education) => {
+  //       console.log(response);
+  //       this.getEducation();
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     },
+  //   });
+  // }
 
-  public onDeleteEducation(idEdu: number): void {
-    this.educationService.deleteEducation(idEdu).subscribe({
-      next: (response: void) => {
-        console.log(response);
-        this.getEducation();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
+  // public onDeleteEducation(idEdu: number): void {
+  //   this.educationService.deleteEducation(idEdu).subscribe({
+  //     next: (response: void) => {
+  //       console.log(response);
+  //       this.getEducation();
+  //     },
+  //     error: (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     },
+  //   });
+  // }
 }
