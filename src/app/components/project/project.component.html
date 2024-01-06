@@ -1,48 +1,52 @@
-
 <div id="main-container data-aos">
-  <div class="container py-4" >
+  <div class="container py-4">
 
-      <h2 class="fs-1 pt-1 font-monospace fw-bold">PROYECTOS</h2>
-      <hr>
+    <h2 class="fs-1 pt-1 font-monospace fw-bold">PROYECTOS</h2>
+    <hr>
 
-      <!-- <div>
+    <!-- <div>
         <div *ngIf="isloged()" class="text-center">
           <button type="button" class="btn btn-success btn-sm"><a class="nav-link" style="color: aliceblue">Añadir Projecto<span class="sr-only"> (current)</span></a>
           </button>
         </div>
       </div> -->
 
-      <div id="carouselExampleIndicators" class="carousel slide pt-3" data-bs-ride="carousel" data-bs-interval="5500" pause="hover" touch="true" data-aos="fade-up" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
-      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-      data-aos-anchor-placement="top-center">
-        <div class="carousel-inner">
+    <div id="carouselExampleIndicators" class="carousel slide pt-3" data-bs-ride="carousel" data-bs-interval="5500"
+      pause="hover" touch="true" data-aos="fade-up" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+      <div class="carousel-inner">
 
-          <!-- ngfor loop using get dynamic value and ngclass for add acive class -->
-          <div class="carousel-item" *ngFor="let project of projects; let i = index" [ngClass]="{'active': i === 0}">
-           <img src={{project.picPro}} class="rounded rounded-3 mx-auto d-block w-75" alt="images-projects" title=""/>
-           <br>
-           <h3 class="card-title text-center pt-3" id="description" >{{project.titlePro}}</h3>
-           <p class="card-text text-center" id="description">{{project.descPro}}</p>
-           <span class="d-flex flex-row justify-content-center gap-2 pb-5">
-           <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-link"><a target="_blank" class="nav-link" href="{{project.linkPro}}"><img src="../../../assets/github.webp" id="link-animado" alt="icon-github" width="28"></a></button>
-           </span>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon btn btn-outline-light" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon btn btn-outline-light" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        <!-- ngfor loop using get dynamic value and ngclass for add acive class -->
+        <div class="carousel-item" *ngFor="let project of projects; let i = index" [ngClass]="{'active': i === 0}">
+          <img src={{project.picPro}} class="rounded rounded-3 mx-auto d-block" width="860" height="430"
+            alt="images-projects" title="" />
+          <br>
+          <h3 class="card-title text-center pt-3" id="description">{{project.titlePro}}</h3>
+          <p class="card-text text-center" id="description">{{project.descPro}}</p>
+          <span class="d-flex flex-row justify-content-center gap-2 pb-5">
+            <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-link"><a target="_blank"
+                class="nav-link" href="{{project.linkPro}}"><img src="../../../assets/github.webp" id="link-animado"
+                  alt="icon-github" width="28"></a></button>
+          </span>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon btn btn-outline-light" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon btn btn-outline-light" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+    </div>
 
 
 
     <!-------------MODAL AÑADIR------------>
 
-  <!-- <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="addProjectModalLabel"
+    <!-- <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="addProjectModalLabel"
     aria-hidden="true">
 
     | <div class="modal-dialog" role="document">
@@ -97,9 +101,9 @@
 
 
 
-  <!-------------MODAL EDITAR------------>
+    <!-------------MODAL EDITAR------------>
 
-  <!-- <div class="modal fade" id="editProjectModal" tabindex="-1" role="dialog" aria-labelledby="projectEditModalLabel"
+    <!-- <div class="modal fade" id="editProjectModal" tabindex="-1" role="dialog" aria-labelledby="projectEditModalLabel"
     aria-hidden="true">
 
     <div class="modal-dialog" role="document">
@@ -159,9 +163,9 @@
   </div> -->
 
 
-  <!-------------MODAL ELIMINAR------------>
+    <!-------------MODAL ELIMINAR------------>
 
-  <!-- <div data-bs-toggle="modal" data-bs-target="#deleteModelLabel" class="modal fade" id="deleteProjectModal" tabindex="-1"
+    <!-- <div data-bs-toggle="modal" data-bs-target="#deleteModelLabel" class="modal fade" id="deleteProjectModal" tabindex="-1"
     role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
 
     <div class="modal-dialog" role="document">

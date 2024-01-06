@@ -20,8 +20,6 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AppRoutingModule } from './app-routing.module';
 
-
-
 import { InterceptorService } from './services/interceptor.service';
 import { EducationComponent } from './components/education/education.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -35,47 +33,45 @@ import { InfoService } from './services/info.service';
 import { EducationService } from './services/education.service';
 import { AboutMeService } from './services/about-me.service';
 import { LoadingPageService } from './services/loading-page.service';
-
-
-
+import { SplashComponent } from './shared/splash/splash.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavbarComponent,
-        HeaderComponent,
-        ExperienceComponent,
-        EducationComponent,
-        FooterComponent,
-        PortfolioComponent,
-        AboutMeComponent,
-        SkillsComponent,
-        ProjectComponent,
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        ReactiveFormsModule,
-        FormsModule,
-        FontAwesomeModule,
-        NgCircleProgressModule.forRoot({}),
-        HttpClientModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
-    ],
-    providers: [
-      { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true},
-        AboutMeService,
-        EducationService,
-        InfoService,
-        ExperienceService,
-        SkillsService,
-        ProjectService,
-        AutenticacionService,
-        LoadingPageService,
-        { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
-
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HeaderComponent,
+    ExperienceComponent,
+    EducationComponent,
+    FooterComponent,
+    PortfolioComponent,
+    AboutMeComponent,
+    SkillsComponent,
+    ProjectComponent,
+    SplashComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    FontAwesomeModule,
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
+    AboutMeService,
+    EducationService,
+    InfoService,
+    ExperienceService,
+    SkillsService,
+    ProjectService,
+    AutenticacionService,
+    LoadingPageService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
