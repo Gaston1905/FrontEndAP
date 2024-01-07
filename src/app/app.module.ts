@@ -1,7 +1,10 @@
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpErrorInterceptor } from './services/http-error-interceptor.service';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -34,21 +37,13 @@ import { EducationService } from './services/education.service';
 import { AboutMeService } from './services/about-me.service';
 import { LoadingPageService } from './services/loading-page.service';
 import { SplashComponent } from './shared/splash/splash.component';
+import { DeveloperJobComponent } from './components/jobs/developer-job/developer-job.component';
+import { MaintanceJobComponent } from './components/jobs/maintance-job/maintance-job.component';
+import { LowCostJobComponent } from './components/jobs/low-cost-job/low-cost-job.component';
+import { ComponentModule } from './components/component.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HeaderComponent,
-    ExperienceComponent,
-    EducationComponent,
-    FooterComponent,
-    PortfolioComponent,
-    AboutMeComponent,
-    SkillsComponent,
-    ProjectComponent,
-    SplashComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -59,6 +54,7 @@ import { SplashComponent } from './shared/splash/splash.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    ComponentModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },

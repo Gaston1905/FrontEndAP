@@ -33,4 +33,12 @@ export const projects: Project[] = [
     linkPro: 'https://github.com/Gaston1905/Porfolio-announcer',
     picPro: '../../assets/portfolioAnnouncer.jpg',
   },
+  {
+    idPro: 5,
+    titlePro: 'Blog',
+    descPro:
+      'Tecnologías utilizadas: HTML5 | CSS3 | Bootstrap | JS | TS | Angular',
+    linkPro: 'https://github.com/Gaston1905/blog',
+    picPro: '../../assets/hastalavictoria.jpg',
+  },
 ];
