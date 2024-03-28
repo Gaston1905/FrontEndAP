@@ -5,19 +5,19 @@
 
 <div class="p-5 rounded-top ">
 
-  <div class="container py-4 contenedor" >
-    <h2 class="fs-1 pt-5 mb-3 mt-3 font-monospace data-aos" data-aos="fade-right" data-aos-offset="3" data-aos-delay="50" data-aos-duration="1800"
-    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-    data-aos-anchor-placement="top-center">ACERCA DE MI</h2>
+  <div class="container py-4 contenedor">
+    <h2 class="fs-1 pt-5 mb-3 mt-3 font-monospace data-aos" data-aos="fade-right" data-aos-offset="3"
+      data-aos-delay="50" data-aos-duration="1800" data-aos-easing="ease-in-out" data-aos-mirror="true"
+      data-aos-once="false" data-aos-anchor-placement="top-center">ACERCA DE MI</h2>
     <hr class="data-aos" data-aos="fade-right" data-aos-offset="3" data-aos-delay="100" data-aos-duration="2000"
-    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-    data-aos-anchor-placement="top-center">
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
 
     <div class="row align-items-center py-3 pb-5 data-aos">
       <div class="col-sm-4">
         <img data-aos="zoom-in" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
-        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center"  src="{{aboutme.pictureAboutMe}}" class="img-thumbnail mb-5" alt="picture-profile" width="480">
+          data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+          data-aos-anchor-placement="top-center" src="{{aboutme.pictureAboutMe}}" class="img-thumbnail mb-5"
+          alt="picture-profile" width="480">
         <!-- <a *ngIf="isloged()" (click)="onOpenModal('edit', aboutme)" class="btn text-primary tooltips "
           data-placement="top" data-toggle="tooltip" data-original-title="edit">
           <fa-icon [icon]="faPenToSquare">
@@ -26,73 +26,17 @@
       </div>
       <div class="col-sm-8 mt-3 text-white pb-5 font-monospace">
         <h3 class="fs-5" data-aos="flip-right" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
-        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center">{{aboutme.titleAboutMe}}</h3>
+          data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+          data-aos-anchor-placement="top-center">{{aboutme.titleAboutMe}}</h3>
         <hr data-aos="flip-left" data-aos-offset="3" data-aos-delay="150" data-aos-duration="2000"
-        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center">
-        <p class="fs-4 rounded-3 lh-1" id="description" data-aos="flip-right" data-aos-offset="3" data-aos-delay="100" data-aos-duration="1800"
-        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-        data-aos-anchor-placement="top-center">{{aboutme.descAboutMe}}</p>
+          data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+          data-aos-anchor-placement="top-center">
+        <p class="fs-4 rounded-3 lh-1" id="description" data-aos="flip-right" data-aos-offset="3" data-aos-delay="100"
+          data-aos-duration="1800" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+          data-aos-anchor-placement="top-center">{{aboutme.descAboutMe}}</p>
       </div>
     </div>
   </div>
 </div>
 
 <!-- <div class="rectangle mb-5 rounded" id="rectangle2"></div> -->
-
-
-<!--------Edit Info    --------------------------------->
-
-
-<div class="modal fade" id="editAboutMeModal" tabindex="-1" role="dialog" aria-labelledby="educationEditModalLabel"
-  aria-hidden="true">
-
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="aboutMeEditModalLabel">
-          Editar{{ editAboutMe?.titleAboutMe}}
-        </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <form #editForm="ngForm">
-
-          <div class="form-group">
-            <label for="titleAboutMe">Título</label>
-            <input type="text" ngModel="{{ editAboutMe?.titleAboutMe }}" name="titleAboutMe" class="form-control"
-              id="titleAboutMe" placeholder="Fecha de inicio" />
-          </div>
-
-          <div class="form-group">
-            <label for="profileAboutMe">Foto de Perfil</label>
-            <input type="text" ngModel="{{ editAboutMe?.pictureAboutMe }}" name="profileAboutMe" class="form-control"
-              id="profileAboutMe" placeholder="Foto de Perfil" />
-          </div>
-
-          <input type="hidden" ngModel="{{ editAboutMe?.idAboutMe }}" name="idAboutMe" class="form-control"
-            id="idAboutMe" placeholder="" />
-
-          <div class="form-group">
-            <label for="descAboutMe">Descripción</label>
-            <input type="text" ngModel="{{ editAboutMe?.descAboutMe }}" name="descAboutMe" class="form-control"
-              id="descAboutMe" placeholder="Descripción" />
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">
-              Cerrar
-            </button>
-            <button data-dismiss="modal" class="btn btn-primary">
-              Salvar Cambios
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>

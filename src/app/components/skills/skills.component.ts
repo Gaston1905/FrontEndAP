@@ -8,7 +8,6 @@ import { Skill } from 'src/app/model/skill';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
 
-
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -102,5 +101,4 @@ export class SkillsComponent implements OnInit {
       },
     });
   }
-
 }
