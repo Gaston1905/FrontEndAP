@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rrss-navbar',
@@ -15,18 +15,6 @@ import { Component } from '@angular/core';
         ><img
           src="../../../assets/linkedin.webp"
           alt="icon-linkedin"
-          width="28"
-      /></a>
-    </li>
-    <li class="nav-item active ms-1 me-1">
-      <a
-        target="_blank"
-        class="nav-link active"
-        id="link-animado"
-        href="https://www.instagram.com/gaitan_dev/"
-        ><img
-          src="../../../assets/instagram.webp"
-          alt="icon-instagram"
           width="28"
       /></a>
     </li>
@@ -61,4 +49,6 @@ import { Component } from '@angular/core';
   </ul>`,
   styleUrl: '../rrss-navbar/rrss-navbar.component.scss',
 })
-export class RrssNavbarComponent {}
+export class RrssNavbarComponent implements OnInit {
+  ngOnInit(): void {}
+}

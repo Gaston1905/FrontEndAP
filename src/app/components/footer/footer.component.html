@@ -6,33 +6,107 @@
 
   <div class="contacto">
     <p class="w-25 mx-auto text-center pb-4 fw-bold">Pongamonos en contacto!<br />
-      Si tenes alguna duda o deseas saber algo más de mi podes hacer click en el siguiente botón y elegir el canal de comunicación.<br />
+      Si tenes alguna duda o deseas saber algo más de mi podes hacer click en el siguiente botón y elegir el canal de
+      comunicación.<br />
       Voy a hacer todo lo
       posible por contestar
     </p>
     <button type="button" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-      aria-controls="collapseExample" class="btn text-white btn-lg px-4"
+      aria-controls="collapseExample" (click)="toggleCollapse()"
+      class=" text-white btn rounded-pill d-flex justify-content-center align-items-center px-2"
       id="link-animado">Contactame</button>
 
-    <div class="collapse" id="collapseExample" data-bs-dismiss="button">
-      <ul class="navbar-nav ml-auto d-flex flex-row bd-highlight align-items-center">
-        <li class=" nav-item active ms-1 me-3">
-          <a target="_blank" class="nav-link" id="link-animado" href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img
-              src="../../../assets/linkedin.webp" alt="icon-linkedin" width="28"></a>
-        </li>
-        <li class="nav-item active ms-1 me-3">
-          <a target="_blank" class="nav-link active" id="link-animado" href="https://www.instagram.com/gaitan_dev/"><img
-              src="../../../assets/instagram.webp" alt="icon-instagram" width="28"></a>
-        </li>
-        <li class="nav-item active ms-1 me-3">
-          <a target="_blank" class="nav-link active" id="link-animado" href="https://github.com/Gaston1905"><img
-              src="../../../assets/github.webp" alt="icon-github" width="28"></a>
-        </li>
-        <li class="nav-item active ms-1 me-3">
-          <a target="_blank" class="nav-link active" id="link-animado" href="https://www.facebook.com/pitu.pitu.7982/"><img
-              src="../../../assets/facebook.webp" alt="icon-facebook" width="28"></a>
-        </li>
-      </ul>
+    <div class="collapse " id="collapseExample" data-bs-dismiss="button">
+      <div *ngIf="isOpen" class="d-flex flex-column p-4  container-contact-footer rounded mt-3 "
+        [ngClass]="{'fade-in-animation': !fadeOut, 'fade-out-animation' : fadeOut }">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <div style="width: 50%">
+            <div class="bg-dark rounded position-relative">
+              <input type="text" class="rounded p-2 input-email-copy fw-bolder" style="width: 91%" id="emailInput"
+                placeholder="Nombre" value="{{email}}" readonly>
+              <i class="bi bi-copy text-light px-2" style="cursor: pointer" (click)="copyToClipboard()"></i>
+              <div id="copyMessage"
+                class="position-absolute end-0 top-50 bg-dark text-light border border-light rounded py-1 px-3 shadow"
+                style="display: none;">Copiado
+              </div>
+            </div>
+          </div>
+          <div>
+            <ul class="navbar-nav ml-auto d-flex flex-row bd-highlight align-items-center">
+              <li class="  active ms-1 me-3">
+                <a target="_blank" class="nav-link" id="link-animado"
+                  href="https://www.linkedin.com/in/gaston-gaitan-1a3799205/"><img src="../../../assets/linkedin.webp"
+                    alt="icon-linkedin" width="28"></a>
+              </li>
+              <li class=" active ms-1 me-3">
+                <a target="_blank" class="nav-link active" id="link-animado" href="https://github.com/Gaston1905"><img
+                    src="../../../assets/github.webp" alt="icon-github" width="28"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="hr-label-contact-container">
+        <form [formGroup]="formGroup">
+          <div class="d-flex">
+            <div>
+              <div class="position-relative">
+                <input type="text" class="rounded p-2 mb-2" name="name" id="name" formControlName="name"
+                  placeholder="Nombre" (input)="listeningForm()">
+                <ng-container *ngIf="nameError">
+                  <div class="position-absolute" style="right: 0; bottom: .65em;">
+                    <div class="d-flex position-relative">
+                      <span class=" bg-info position-absolute" style="left: -.98em; bottom: .7em" id="triangle"></span>
+                      <div class="fw-bold bg-info p-2 rounded ml-2">
+                        Ingrese un nombre
+                      </div>
+                    </div>
+
+                  </div>
+                </ng-container>
+              </div>
+              <div class="position-relative">
+                <input type="email" class="rounded p-2 mb-2" formControlName="email" placeholder="Email"
+                  (input)="listeningForm()">
+                <ng-container *ngIf="emailError">
+                  <div class="position-absolute" style="right: 0; bottom: .65em;">
+                    <div class="d-flex position-relative">
+                      <span class=" bg-info position-absolute" style="left: -.98em; bottom: .7em" id="triangle"></span>
+                      <div class="fw-bold bg-info p-2 rounded ml-2">
+                        Ingrese un email
+                      </div>
+                    </div>
+
+                  </div>
+                </ng-container>
+
+              </div>
+            </div>
+          </div>
+          <div class="nav-item position-relative">
+            <textarea name="contacForm" class="rounded mb-2" formControlName="message" id="" cols="100" rows="10"
+              placeholder="Mensaje" (input)="listeningForm()"></textarea>
+            <ng-container *ngIf="messageError">
+              <div class="position-absolute" style="right: 0; top: 0;">
+                <div class="d-flex position-relative">
+                  <span class=" bg-info position-absolute" style="left: -.98em; bottom: .7em" id="triangle"></span>
+                  <div class="fw-bold bg-info p-2 rounded ml-2">
+                    Ingrese un mensaje
+                  </div>
+                </div>
+
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="button" (click)="onSubmit()"
+              class=" text-white btn rounded-pill d-flex justify-content-center align-items-center py-1 px-4 me-1"
+              id="link-animado">Enviar</button>
+          </div>
+        </form>
+      </div>
     </div>
 
   </div>
@@ -40,19 +114,19 @@
 
 
 
-  <footer  class="rounded pt-3" id="footer-style">
+  <footer class="rounded pt-3" id="footer-style">
     <p class=" fs-5 fw-bold">GASTON GAITAN</p>
-    <hr>
+    <hr class="hr-label-bottom">
     <p class="fw-bold">DISEÑADOR Y DESARROLLADOR WEB</p>
   </footer>
 
-<div class="modal fade bd-example-modal-lg" id="modalContact">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content" style="border-radius: 20%">
-      <div class="modal-header">
-        <h5 class="modal-title">Contacto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="modal fade bd-example-modal-lg" id="modalContact">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 20%">
+        <div class="modal-header">
+          <h5 class="modal-title">Contacto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
       </div>
     </div>
   </div>
-</div>

@@ -3,4 +3,5 @@ export interface Info {
   nameInfo: String;
   surnameInfo: String;
   titleInfo: String;
+  email: string;
 }

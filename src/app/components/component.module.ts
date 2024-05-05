@@ -14,6 +14,7 @@ import { DeveloperJobComponent } from './jobs/developer-job/developer-job.compon
 import { MaintanceJobComponent } from './jobs/maintance-job/maintance-job.component';
 import { LowCostJobComponent } from './jobs/low-cost-job/low-cost-job.component';
 import { NavbarModule } from './navbar/navbar.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,6 @@ import { NavbarModule } from './navbar/navbar.module';
     MaintanceJobComponent,
     LowCostJobComponent,
   ],
-  imports: [CommonModule, NavbarModule],
+  imports: [CommonModule, NavbarModule, ReactiveFormsModule],
 })
 export class ComponentModule {}
