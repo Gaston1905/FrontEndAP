@@ -7,11 +7,12 @@ import { MaintanceJobComponent } from './components/jobs/maintance-job/maintance
 import { LowCostJobComponent } from './components/jobs/low-cost-job/low-cost-job.component';
 
 const routes: Routes = [
-  { path: 'home', component: PortfolioComponent },
-  { path: 'portfolio', component: ProjectComponent },
-  { path: 'design&dev', component: DeveloperJobComponent },
-  { path: 'maintance', component: MaintanceJobComponent },
-  { path: 'low-cost', component: LowCostJobComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirige la ruta base a 'home'
+  { path: 'home', component: PortfolioComponent }, // Componente para la ruta 'home'
+  { path: 'portfolio', component: ProjectComponent }, // Componente para la ruta 'portfolio'
+  { path: 'design&dev', component: DeveloperJobComponent }, // Componente para la ruta 'design&dev'
+  { path: 'maintance', component: MaintanceJobComponent }, // Componente para la ruta 'maintance'
+  { path: 'low-cost', component: LowCostJobComponent }, // Componente para la ruta 'low-cost'
 ];
 
 @NgModule({

@@ -11,8 +11,8 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-md-6" *ngFor="let project of projects">
-            <div class="card mb-4 box-shadow">
+          <div class="col-md-6" *ngFor="let project of projects.slice(0, visibleProjectsIndex)">
+            <div class="card mb-4 box-shadow fade-in-animation">
               <img class="card-img-top" height="310" data-src="{{project.picPro}}" alt="Card image cap">
               <div class="card-body">
                 <p class="card-text">{{project.titlePro}}</p>
@@ -20,7 +20,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href="{{project.linkPro}}" class="btn btn-sm btn-outline-secondary">REPOSITORIO</a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">WEB</button>
+                    <a href="{{project.urlPro}}" class="btn btn-sm btn-outline-secondary">WEB</a>
                   </div>
                 </div>
               </div>
@@ -29,6 +29,13 @@
 
         </div>
       </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type=" button" (click)="hideOn()"
+        class=" rounded-circle p-4 border-light bg-transparent text-dark d-flex flex-column align-items-center">
+        <span class="fs-3">VER MÁS</span>
+        <i class="bi bi-chevron-double-down fs-2"></i>
+      </button>
     </div>
   </div>
 
