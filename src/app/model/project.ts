@@ -4,4 +4,5 @@ export interface Project {
   descPro: string;
   linkPro: string;
   picPro: string;
+  urlPro: string;
 }
